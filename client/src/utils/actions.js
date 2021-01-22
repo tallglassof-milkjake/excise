@@ -1,0 +1,5 @@
+export const UPDATE_EXCISE = "UPDATE_EXCISE";
+export const REMOVE_EXCISE = "REMOVE_EXCISE";
+export const SET_RECENT_EXCISE = "SET_RECENT_EXCISE";
+export const ADD_EXCISE = "ADD_EXCISE";
+export const LOADING = "LOADING";

@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const postRoutes = require("./posts");
+const exciseRoutes = require("./excise");
 
-router.use("/posts", postRoutes);
+router.use("/excise", exciseRoutes);
 
 module.exports = router;

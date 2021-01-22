@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+.container-fluid {
+    min-height: 100%;
+    padding: 0 !important;
+}
+
+.sticky-nav {
+    padding: 0 !important;
+}
+
+.nav-color {
+    background-color: #246CA3;
+    color: white;
+}
+
+.sidebar {
+    max-width: 15rem;
+}

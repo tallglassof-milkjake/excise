@@ -2,10 +2,13 @@
   "name": "cms",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "Proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "concurrently": "^5.3.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^16.13.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "3.4.3"
