@@ -6,8 +6,15 @@ import Auth0ProviderWithHistory from './auth/Auth0ProviderWithHistory';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
+    
     <Router>
-        <Auth0ProviderWithHistory>
+        {console.log(process.env.REACT_APP_AFTER_LOGIN)}
+        <Auth0ProviderWithHistory
+            domain={process.env.REACT_APP_AUTH0_DOMAIN}
+            clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
+            redirectUri={process.env.REACT_APP_AFTER_LOGIN}
+            
+        >
             <App />
         </Auth0ProviderWithHistory>
     </Router>,

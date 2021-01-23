@@ -21,16 +21,6 @@ function NavBar() {
                 </Nav.Item>
             </div>
         </div>
-        // <>
-        //     <Nav 
-        //         className="col-md-12 d-none d-md-block bg-light sidebar"
-        //         activeKey="/home"
-        //         onSelect={selectedKey => alert(`selected ${selectedKey}`)}
-        //     >
-        //         <div className="sidebar-sticky"></div>
-        //         
-        //     </Nav>
-        // </>
     )
 }
 

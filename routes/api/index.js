@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const exciseRoutes = require("./excise");
 
-router.use("/excise", exciseRoutes);
+router.use("/", exciseRoutes);
 
 module.exports = router;

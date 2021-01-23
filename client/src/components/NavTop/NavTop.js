@@ -1,5 +1,6 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import AuthNav from '../AuthNav/AuthNav';
 
 function TopNav() {
     return (
@@ -11,7 +12,7 @@ function TopNav() {
                     
                 </Nav>
                 <Form inline>
-                    <Button style={{marginright: '10rem', color: 'white', backgroundColor: '#F0824E', outlineColor: '246CA3'}} id='logout-btn'>Logout</Button>
+                    <AuthNav />
                 </Form>
             </Navbar.Collapse>
         </Navbar>

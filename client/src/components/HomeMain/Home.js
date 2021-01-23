@@ -42,7 +42,7 @@ function Home() {
             <List>
                 {state.excises.map(excise => (
                     <ListItem key={excise._id}>
-                        <Link to={"/excise/" + excise._id}>
+                        <Link to={"/api/excise" + excise._id}>
                             <strong>
                                 {excise.product}
                             </strong>
