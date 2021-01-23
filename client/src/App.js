@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Main from './components/Welcome/Welcome';
+import Welcome from './components/Welcome/Welcome';
 import NavTop from './components/NavTop/NavTop';
 import './styles/App.css';
 
@@ -20,7 +20,7 @@ function App() {
           <div>
             <Switch>
               <Route path='/' exact component={Hello} />
-              <ProtectedRoute path='/home' exact component={Main} />
+              <ProtectedRoute path='/welcome' exact component={Welcome} />
               
             </Switch>
           </div>

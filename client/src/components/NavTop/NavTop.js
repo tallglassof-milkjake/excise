@@ -1,5 +1,6 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+
+import { Nav, Navbar, NavDropdown, Form, FormControl, Button, } from 'react-bootstrap';
 import AuthNav from '../AuthNav/AuthNav';
 
 function TopNav() {
@@ -12,7 +13,11 @@ function TopNav() {
                     
                 </Nav>
                 <Form inline>
-                    <AuthNav />
+                    {/* <Nav.Item>
+                        <Nav.Link href='/welcome'> */}
+                            <AuthNav />
+                        {/* </Nav.Link>
+                    </Nav.Item> */}
                 </Form>
             </Navbar.Collapse>
         </Navbar>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from '../components/HomeMain/Home';
 import Excise from './Excise';
 import NotFound from '../components/NotFound/NotFound';
-import Nav from '../components/Nav/Nav';
+import Nav from '../components/SideBar/Nav';
 
 const Main = () => {
 
