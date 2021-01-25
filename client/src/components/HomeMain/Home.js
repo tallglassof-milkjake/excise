@@ -4,21 +4,10 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
 import API from '../../utils/API';
 import { List, ListItem } from '../List/List';
-import SideBar from '../SideBar/Nav';
+import { Form, Button } from 'react-bootstrap';
 
 function Home() {
     const [state, dispatch] = useStoreContext();
-
-    // const removeExcise = id => {
-    //     API.deleteExcise(id)
-    //         .then(() => {
-    //             dispatch({
-    //                 type: REMOVE_EXCISE,
-    //                 _id: id
-    //             });
-    //         })
-    //         .catch(err => console.log(err));
-    // };
 
     const getExcise = () => {
         dispatch({ type: LOADING });
@@ -38,8 +27,17 @@ function Home() {
 
     return (
         <div>
-            <h1>Dashboard</h1>
+            <h1 className='display-3'>Dashboard</h1>
 
+            <Form>
+                <Form.Group>
+                    <Form.Label>Search</Form.Label>
+                    <Form.Control type='text'  />
+                </Form.Group>
+                <Button type='submit'>Search</Button>
+            </Form>
+
+            {state.excises.length ? (
             <List>
                 {state.excises.map(excise => (
                     <ListItem key={excise._id}>
@@ -57,9 +55,10 @@ function Home() {
                     </ListItem>
                 ))}
             </List>
+            ) : (
+                <h1 className='display-4'>There is no data available</h1>
+            )}
         </div>
-            
-        
     )
 }
 

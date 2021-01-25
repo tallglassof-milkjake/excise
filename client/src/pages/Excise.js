@@ -13,6 +13,7 @@ function Excise() {
     const handleSubmit = e => {
         e.preventDefault();
         dispatch({ type: LOADING });
+        console.log(productRef.current.value);
         API.addExcise({
             date: dateRef.current.value,
             product: productRef.current.value
@@ -34,7 +35,7 @@ function Excise() {
             <Form onSubmit={handleSubmit}>
                 <Form.Group>
                     <Form.Label>Date:</Form.Label>
-                    <Form.Control type='date' required ref={dateRef} placeholder='Date' />
+                    <Form.Control type='date' ref={dateRef} />
                     <Form.Text className='text-muted'>
                         Please Enter The Date
                     </Form.Text>
@@ -42,7 +43,7 @@ function Excise() {
 
                 <Form.Group>
                     <Form.Label>Product:</Form.Label>
-                    <Form.Control type='text' required ref={productRef} placeholder='Product' />
+                    <Form.Control type='text' ref={productRef} placeholder='Product' />
                 </Form.Group>
 
                 <Button disabled={state.loading} type='submit'>

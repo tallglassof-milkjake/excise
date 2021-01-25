@@ -14,6 +14,7 @@ export default {
     },
 
     addExcise: function(exciseData) {
+        console.log(exciseData);
         return axios.post('/api/excise', exciseData);
     }
 };

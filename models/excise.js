@@ -3,14 +3,14 @@ const Schema = mongoose.Schema;
 
 const exciseSchema = new Schema({
     date: { type: Date, default: Date.now },
-    product: { type: String, required: true },
-    description: { type: String, required: true },
-    vessel_id: { type: String, required: true },
-    volume: { type: Number, required: true },
-    abv: { type: Number, required: true },
-    lals: { type: Number, required: true },
-    employee: { type: String, required: true },
-    notes: { type: String, required: true },
+    product: { type: String,  },
+    description: { type: String,  },
+    vessel_id: { type: String,  },
+    volume: { type: Number, },
+    abv: { type: Number, },
+    lals: { type: Number, },
+    employee: { type: String, },
+    notes: { type: String,  },
 });
 
 const Excise = mongoose.model("Excise", exciseSchema);
