@@ -1,5 +1,7 @@
 import React from 'react';
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
+
+import './Welcome.css';
 
 const Welcome = () => {
     const { user } = useAuth0();
@@ -7,17 +9,15 @@ const Welcome = () => {
 
     return (
         <>
+            <h1 className='display-1'>Welcome, {name}</h1>        
             <div className='row'>
-                <h1 className='display-1'>Welcome, {name}</h1>
+            <img
+                src={picture}
+                alt='Profile'
+                className='img-fluid'
+            />
+            <p>Contact me at; {email}</p>
             </div>
-            <div className='row'>
-                <img
-                    src={picture}
-                    alt='Profile'
-                    className='img-fluid'
-                />
-                <p>Contact me at; {email}</p>
-            </div>    
         </>
     )
 };

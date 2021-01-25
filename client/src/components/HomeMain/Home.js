@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from '../../utils/GlobalState';
 import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
 import API from '../../utils/API';
-import { List, ListItem } from '../List/List'
+import { List, ListItem } from '../List/List';
+import SideBar from '../SideBar/Nav';
 
 function Home() {
     const [state, dispatch] = useStoreContext();

@@ -24,3 +24,7 @@
 .sidebar-menu-item:hover {
     color: #246CA3;
 }
+
+.sidebar-img {
+    border-radius: 50%;
+}

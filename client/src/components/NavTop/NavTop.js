@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Nav, Navbar, NavDropdown, Form, FormControl, Button, } from 'react-bootstrap';
+import { Nav, Navbar, Form } from 'react-bootstrap';
 import AuthNav from '../AuthNav/AuthNav';
 
 function TopNav() {

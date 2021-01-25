@@ -1,3 +1,9 @@
 .content-section {
     min-height: 2000px;
   }
+
+.side-bar-row {
+    height: 100%;
+    max-width: 15rem;
+    margin: 0;
+}
