@@ -1,0 +1,11 @@
+.date-input {
+    max-width: 15rem;
+}
+
+.product-input, .description-input, .employee-input, .notes-input {
+    max-width: 25rem;
+}
+
+.vessel-input, .volume-input, .abv-input, .lals-input {
+    max-width: 10rem;
+}

@@ -21,18 +21,20 @@ function App() {
         </div>
         <div className='container-fluid d-flex'>
           <div className='row side-bar-row'>
-            <div className='col'>
+            <div className='sidebar-expanded sidebar'>
               <SideBar />
             </div>
           </div>
-          <div className='main-screen row'>
-            <div className='col'>
-              <Switch>
-                <Route path='/' exact component={Hello} />
-                <ProtectedRoute path='/welcome' exact component={Welcome} />
-                <ProtectedRoute path='/dashboard' exact component={Dashboard} />
-                <ProtectedRoute path='/excise' exact component={Excise} />
-              </Switch>
+          <div className='container'>
+            <div className='main-screen row'>
+              <div className='col'>
+                <Switch>
+                  <Route path='/' exact component={Hello} />
+                  <ProtectedRoute path='/welcome' exact component={Welcome} />
+                  <ProtectedRoute path='/dashboard' exact component={Dashboard} />
+                  <ProtectedRoute path='/excise' exact component={Excise} />
+                </Switch>
+              </div>
             </div>
           </div>
         </div>

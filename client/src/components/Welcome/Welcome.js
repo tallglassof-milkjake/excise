@@ -16,7 +16,7 @@ const Welcome = () => {
                 alt='Profile'
                 className='img-fluid'
             />
-            <p>Contact me at; {email}</p>
+            <p>Contact me at: {email}</p>
             </div>
         </>
     )

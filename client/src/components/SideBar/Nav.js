@@ -8,8 +8,7 @@ function NavBar() {
     const { name, picture } = user;
 
     return (
-        <div className='sidebar-item'>
-            <div className='make-me-sticky'>
+            <div className='list-group side-bar-items'>
                 <h1>Welcome</h1>
                 <h2>{name}</h2>
                 <img 
@@ -17,23 +16,25 @@ function NavBar() {
                     alt='Profile'
                     className='img-fluid sidebar-img'
                 />
-                <Nav.Item>
-                    <Nav.Link className='sidebar-menu-item' href="/welcome">Home</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link className='sidebar-menu-item' eventKey="link-1" href="/dashboard">Dashboard</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link className='sidebar-menu-item' eventKey="link-2" href='/excise'>Excise</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link className='sidebar-menu-item' eventKey="link-3" href='/calculator'>Calculator</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link className='sidebar-menu-item' eventKey="link-4" href='/calendar'>Calendar</Nav.Link>
-                </Nav.Item>
+
+                <div>
+                    <Nav.Item>
+                        <Nav.Link className='sidebar-menu-item' href="/welcome">Home</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className='sidebar-menu-item' eventKey="link-1" href="/dashboard">Dashboard</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className='sidebar-menu-item' eventKey="link-2" href='/excise'>Excise</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className='sidebar-menu-item' eventKey="link-3" href='/calculator'>Calculator</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className='sidebar-menu-item' eventKey="link-4" href='/calendar'>Calendar</Nav.Link>
+                    </Nav.Item>
+                </div>
             </div>
-        </div>
     )
 }
 

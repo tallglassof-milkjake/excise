@@ -3,9 +3,7 @@ import Home from '../components/HomeMain/Home.js';
 
 function HomePage() {
     return (
-        
-            <Home />
-        
+        <Home />
     )
 }
 export default HomePage;
