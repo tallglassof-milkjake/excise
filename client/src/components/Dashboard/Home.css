@@ -20,3 +20,12 @@
   width: 50% !important;
 }
 
+.dash-table-row {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.dash-table-col {
+  width: 100%;
+  padding: 0 !important;
+}

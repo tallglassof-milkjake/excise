@@ -4,7 +4,7 @@ import WelcomeData from '../WelcomeData/WelcomeData';
 
 const CurrentProducts = ({ headings }) => {
     return (
-        <table className='product-table table table-striped table-bordered-dark'>
+        <table className='product-table table table-striped'>
             <thead>
                 <tr>{headings.map(({name, width}) => {
                     return (

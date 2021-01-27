@@ -20,22 +20,6 @@ class Home extends Component {
         { name: 'Abv %', width: '10%' },
     ]
 
-    // const getExcise = () => {
-    //     dispatch({ type: LOADING });
-    //     API.getExcise()
-    //         .then(results => {
-    //             dispatch({
-    //                 type: UPDATE_EXCISE,
-    //                 excises: results.data
-    //             });
-    //         })
-    //         .catch(err => console.log(err));
-    // };
-
-    // useEffect(() => {
-    //     getExcise();
-    // }, []);
-
     render() {
     return (
         <div className='dash-main'>
@@ -45,7 +29,7 @@ class Home extends Component {
 
             <div className='row dash-row'>
                 <div className='col dash-col'>
-                    <Form>
+                    <Form className='search-form'>
                         <Form.Group>
                             <Form.Label>Search</Form.Label>
                             <Form.Control type='text'  />
@@ -55,32 +39,14 @@ class Home extends Component {
                 </div>   
             </div>
             
-
-            <DashTable 
-                headings={this.headings}
-            />
-
-            {/* {state.excises.length ? (
-            <List>
-                {state.excises.map(excise => (
-                    <ListItem key={excise._id}>
-                        <Link to={"/api/excise" + excise._id}>
-                            <strong>
-                                {excise.product}
-                            </strong>
-                            <p>
-                                {excise.vessel_id}
-                            </p>
-                            <p>
-                                {excise.volume}
-                            </p>
-                        </Link>
-                    </ListItem>
-                ))}
-            </List>
-            ) : (
-                <h1 className='display-4'>There is no data available</h1>
-            )} */}
+            <div className='row dash-table-row'>
+                <div className='col dash-table-col'>
+                    <DashTable 
+                        headings={this.headings}
+                    />
+                </div>
+            </div>
+            
         </div>
     )
     }
