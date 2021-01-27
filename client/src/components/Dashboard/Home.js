@@ -8,6 +8,8 @@ import { Form, Button } from 'react-bootstrap';
 
 import DashTable from '../DashTable/DashTable';
 
+import './Home.css';
+
 class Home extends Component {
     // const [state, dispatch] = useStoreContext();
 
@@ -36,16 +38,23 @@ class Home extends Component {
 
     render() {
     return (
-        <div>
-            <h1 className='display-3'>Dashboard</h1>
+        <div className='dash-main'>
+            <div className='dash-message'>
+                <h1 className='display-3'>Dashboard</h1>
+            </div>
 
-            <Form>
-                <Form.Group>
-                    <Form.Label>Search</Form.Label>
-                    <Form.Control type='text'  />
-                </Form.Group>
-                <Button type='submit'>Search</Button>
-            </Form>
+            <div className='row dash-row'>
+                <div className='col dash-col'>
+                    <Form>
+                        <Form.Group>
+                            <Form.Label>Search</Form.Label>
+                            <Form.Control type='text'  />
+                        </Form.Group>
+                        <Button type='submit'>Search</Button>
+                    </Form> 
+                </div>   
+            </div>
+            
 
             <DashTable 
                 headings={this.headings}

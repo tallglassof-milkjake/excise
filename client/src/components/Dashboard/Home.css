@@ -1,9 +1,22 @@
-.content-section {
-    min-height: 2000px;
-  }
-
-.side-bar-row {
-    height: 100%;
-    max-width: 15rem;
-    margin: 0;
+.dash-main {
+  text-align: center;
 }
+
+.dash-message {
+  background-color: #F0824E;
+  border-radius: 15px 15px 0 0;
+  padding: .5rem .5rem .5rem .5rem;
+  margin: 0;
+  font-weight: 300 !important;
+}
+
+.dash-row {
+  width: 100%;
+  margin: 0 !important;
+}
+.dash-col {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 50% !important;
+}
+

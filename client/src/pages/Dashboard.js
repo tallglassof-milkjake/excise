@@ -5,12 +5,14 @@ import SideBar from '../components/SideBar/Nav';
 function HomeBoard() {
     return (
         <>
-        <div className='row side-bar-row'>
-            <div className='sidebar-expanded sidebar'>
-              <SideBar />
+            <div className='col-2 side-bar-col'>
+                <SideBar />
             </div>
-        </div>
-        <Dashboard />
+            <div className='col-10 main-col'>
+                <div className='content-section'>
+                    <Dashboard />
+                </div>
+            </div>
         </>
     )
 }
