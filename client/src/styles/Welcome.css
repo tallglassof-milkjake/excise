@@ -1,0 +1,23 @@
+.content-section {
+    margin: 2rem 2rem 2rem 2rem;
+    background-color: #F0824E;
+    height: 100vh;
+    border-radius: 15px;
+    
+}
+
+.side-bar-col {
+    background-color: #41A4F0;
+    min-height: 100vh;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sidebar {
+    margin-left: 25px;
+}
+
+.main-col {
+    background-color: #ffe5d9;
+    padding: 0 !important;
+}

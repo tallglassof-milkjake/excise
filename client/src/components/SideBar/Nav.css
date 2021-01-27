@@ -5,8 +5,22 @@
 
 .sidebar-menu-item:hover {
     color: #246CA3;
+    
 }
 
 .sidebar-img {
     border-radius: 50%;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.menu-list {
+    padding: 2rem 0 0 2.5rem;
+}
+
+.fa-chevron-circle-down {
+    transform: rotate(270deg);
+    margin-right: .5rem;
 }

@@ -1,25 +1,33 @@
-import React from 'react';
-import { useAuth0 } from "@auth0/auth0-react";
-
+import React, { Component } from 'react';
+import CurrentProducts from '../CurrentProducts/CurrentProducts';
+import WelcomeMessage from '../WelcomeMessage/WelcomeMessage';
 import './Welcome.css';
 
-const Welcome = () => {
-    const { user } = useAuth0();
-    const { name, picture, email } = user;
+class Welcome extends Component {
 
-    return (
-        <>
-            <h1 className='display-1'>Welcome, {name}</h1>        
-            <div className='row'>
-            <img
-                src={picture}
-                alt='Profile'
-                className='img-fluid'
-            />
-            <p>Contact me at: {email}</p>
+    headings = [
+        { name: 'Date', width: '10%' },
+        { name: 'Product', width: '10%' },
+        { name: 'Volume', width: '10%' },
+        { name: 'Abv %', width: '10%' },
+    ]
+
+    render() {
+        return (
+            <div className='welcome-main'>
+                <WelcomeMessage />
+
+                <div className='row welcome-table-row'>
+                    <div className='col welcome-table-col'>
+                        <CurrentProducts headings={this.headings}/>
+                    </div>
+                </div>
+                
+    
             </div>
-        </>
-    )
+        )
+    }
+    
 };
 
 export default Welcome;

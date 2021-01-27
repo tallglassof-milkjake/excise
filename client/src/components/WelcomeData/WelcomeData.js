@@ -6,8 +6,7 @@ import API from '../../utils/API';
 import { List, ListItem } from '../List/List';
 import { Form, Button } from 'react-bootstrap';
 
-function DashData() {
-    
+function WelcomeData() {
     const [state, dispatch] = useStoreContext();
 
     const getExcise = () => {
@@ -25,8 +24,9 @@ function DashData() {
     useEffect(() => {
         getExcise();
     }, []);
+
     
-    return (
+    return(
         <tbody>
             {state.excises.map(excise => {
                 return(
@@ -48,6 +48,7 @@ function DashData() {
             })}
         </tbody>
     )
+    
 }
 
-export default DashData;
+export default WelcomeData;
