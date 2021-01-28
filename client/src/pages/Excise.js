@@ -6,16 +6,16 @@ function Excise() {
 
     return (
         <>
-        <div className='row side-bar-row'>
-            <div className='sidebar-expanded sidebar'>
-              <SideBar />
-            </div>
+        <div className='col side-bar-col'>
+            <SideBar />
         </div>
-        <div className='row'>
-            <div className='col'>
+        
+        <div className='col-10 main-col'>
+            <div className='content-section'>
                 <ExciseForm />
             </div>
         </div>
+        
         </>
     )
 }

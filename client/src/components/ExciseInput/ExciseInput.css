@@ -9,3 +9,15 @@
 .vessel-input, .volume-input, .abv-input, .lals-input {
     max-width: 10rem;
 }
+
+.excise-main {
+    padding: 2rem 4rem 2rem 4rem !important;
+}
+
+.excise-form {
+    width: 100%;
+}
+
+hr {
+    margin-left: 0 !important;
+}

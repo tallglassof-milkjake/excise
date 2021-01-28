@@ -1,9 +1,14 @@
 import React from 'react';
+import './Loading.css';
 
 const Loading = () => {
     return (
-        <div style={{backgroundColor: '#CC5500'}}>
-            <h1 className='display-1'>Loading</h1>
+        <div className='container-fluid load-container'>
+            <div className='row load-row align-items-center'>
+                <div className='col text-center'>
+                    <i className="fas fa-spinner fa-5x"></i>
+                </div>
+            </div>
         </div>
     )
 };

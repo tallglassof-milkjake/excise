@@ -46,60 +46,106 @@ function ExciseForm() {
     }
 
     return (
-        <div className='row'>
-            <div className='col'>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group>
-                        <Form.Label>Date:</Form.Label>
-                        <Form.Control type='date' ref={dateRef} className='date-input' />
-                    </Form.Group>
+        
+            <div className='excise-main container'>
+                <div className='row align-items-center'>
+                    <div className='col-md-8'>
+                        <h1 className='display-1'>Add to Database</h1>
 
-                    <Form.Group>
-                        <Form.Label>Product:</Form.Label>
-                        <Form.Control type='text' ref={productRef} placeholder='Product' className='product-input' />
-                    </Form.Group>
+                        <p className='lead'>
+                            Fill out finished product details here to save to database
+                        </p>
 
-                    <Form.Group>
-                        <Form.Label>Description:</Form.Label>
-                        <Form.Control type='text' ref={descriptionRef} placeholder='Description' className='description-input' />
-                    </Form.Group>
+                        <hr/>
+                    </div>
+                    <div className='col-md-4 text-center'>
+                        <i className="fas fa-database fa-5x" style={{color: '#41A4F0'}}></i>
+                    </div>
+                </div>
+                    <Form className='excise-form' onSubmit={handleSubmit}>
+                        <div className='row'>
+                            <div className='col-3'>
+                                <Form.Group>
+                                    <Form.Label>Date:</Form.Label>
+                                    <Form.Control type='date' ref={dateRef} className='date-input' />
+                                </Form.Group>
+                            </div>
+                            
+                            <div className='col-4'>
+                                <Form.Group>
+                                    <Form.Label>Product:</Form.Label>
+                                    <Form.Control type='text' ref={productRef} placeholder='Product' className='product-input' />
+                                </Form.Group>
+                            </div>
 
-                    <Form.Group>
-                        <Form.Label>Vessel Id:</Form.Label>
-                        <Form.Control type='text' ref={vessel_idRef} placeholder='Vessel Id' className='vessel-input' />
-                    </Form.Group>
+                            <div className='col-4'>
+                                <Form.Group>
+                                    <Form.Label>Description:</Form.Label>
+                                    <Form.Control type='text' ref={descriptionRef} placeholder='Description' className='description-input' />
+                                </Form.Group>
+                            </div>
 
-                    <Form.Group>
-                        <Form.Label>Volume:</Form.Label>
-                        <Form.Control type='number' ref={volumeRef} placeholder='Volume' className='volume-input' />
-                    </Form.Group>
+                            <div className='col-2'>
+                                <Form.Group>
+                                    <Form.Label>Vessel Id:</Form.Label>
+                                    <Form.Control type='text' ref={vessel_idRef} placeholder='Vessel Id' className='vessel-input' />
+                                </Form.Group>
+                            </div>
+                            
+                            <div className='col-2'>
+                                <Form.Group>
+                                    <Form.Label>Volume:</Form.Label>
+                                    <Form.Control type='number' ref={volumeRef} placeholder='Volume' className='volume-input' />
+                                </Form.Group>
+                            </div>
 
-                    <Form.Group>
-                        <Form.Label>ABV:</Form.Label>
-                        <Form.Control type='number' ref={abvRef} placeholder='ABV' className='abv-input' />
-                    </Form.Group>
+                            <div className='col-2'>
+                                <Form.Group>
+                                    <Form.Label>Volume:</Form.Label>
+                                    <Form.Control type='number' ref={volumeRef} placeholder='Volume' className='volume-input' />
+                                </Form.Group>
+                            </div>
 
-                    <Form.Group>
-                        <Form.Label>LALs:</Form.Label>
-                        <Form.Control type='number' ref={lalsRef} placeholder='LALs' className='lals-input' />
-                    </Form.Group>
+                            <div className='col-2'>
+                                <Form.Group>
+                                    <Form.Label>ABV:</Form.Label>
+                                    <Form.Control type='number' ref={abvRef} placeholder='ABV' className='abv-input' />
+                                </Form.Group>
+                            </div>
+                            
+                            <div className='col-2'>
+                                <Form.Group>
+                                    <Form.Label>LALs:</Form.Label>
+                                    <Form.Control type='number' ref={lalsRef} placeholder='LALs' className='lals-input' />
+                                </Form.Group>
+                            </div>
+                            
+                            <div className='col-3'>
+                                <Form.Group>
+                                    <Form.Label>Employee:</Form.Label>
+                                    <Form.Control type='text' ref={employeeRef} placeholder='Employee' className='employee-input' />
+                                </Form.Group>
+                            </div>
 
-                    <Form.Group>
-                        <Form.Label>Employee:</Form.Label>
-                        <Form.Control type='text' ref={employeeRef} placeholder='Employee' className='employee-input' />
-                    </Form.Group>
-
-                    <Form.Group>
-                        <Form.Label>Notes:</Form.Label>
-                        <Form.Control as='textarea' rows={3} type='text' ref={notesRef} placeholder='Notes' className='notes-input' />
-                    </Form.Group>
-
-                    <Button disabled={state.loading} type='submit'>
-                        Submit
-                    </Button>
-                </Form>
+                            <div className='col-4'>
+                                <Form.Group>
+                                    <Form.Label>Notes:</Form.Label>
+                                    <Form.Control as='textarea' rows={3} type='text' ref={notesRef} placeholder='Notes' className='notes-input' />
+                                </Form.Group>
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <div className='col-2'>
+                                <Button disabled={state.loading} type='submit'>
+                                    Submit
+                                </Button>
+                            </div>
+                        </div>
+                    </Form>
+                
+                
             </div>
-        </div>
+        
     )
 }
 
