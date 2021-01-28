@@ -27,7 +27,7 @@ class Home extends Component {
                 <h1 className='display-3'>Dashboard</h1>
             </div>
 
-            <div className='row dash-row'>
+            <div className='row dash-row justify-content-center'>
                 <div className='col dash-col'>
                     <Form className='search-form'>
                         <Form.Group>

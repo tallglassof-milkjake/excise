@@ -13,11 +13,12 @@
 .dash-row {
   width: 100%;
   margin: 0 !important;
+  padding: 0;
 }
+
 .dash-col {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 50% !important;
+  max-width: 40% !important;
+  
 }
 
 .dash-table-row {
