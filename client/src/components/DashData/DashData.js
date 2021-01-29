@@ -6,29 +6,29 @@ import API from '../../utils/API';
 import { List, ListItem } from '../List/List';
 import { Form, Button } from 'react-bootstrap';
 
-function DashData() {
+function DashData({ excise }) {
     
-    const [state, dispatch] = useStoreContext();
+    // const [state, dispatch] = useStoreContext();
 
-    const getExcise = () => {
-        dispatch({ type: LOADING });
-        API.getExcise()
-            .then(results => {
-                dispatch({
-                    type: UPDATE_EXCISE,
-                    excises: results.data
-                });
-            })
-            .catch(err => console.log(err));
-    };
+    // const getExcise = () => {
+    //     dispatch({ type: LOADING });
+    //     API.getExcise()
+    //         .then(results => {
+    //             dispatch({
+    //                 type: UPDATE_EXCISE,
+    //                 excises: results.data
+    //             });
+    //         })
+    //         .catch(err => console.log(err));
+    // };
 
-    useEffect(() => {
-        getExcise();
-    }, []);
+    // useEffect(() => {
+    //     getExcise();
+    // }, []);
     
     return (
         <tbody>
-            {state.excises.map(excise => {
+            {excise.map(excise => {
                 return(
                 <tr key={excise._id}>
                     <td data-th="Date">
