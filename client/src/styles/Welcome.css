@@ -3,7 +3,6 @@
     background-color: #F0824E;
     /* height: 100%; */
     border-radius: 15px;
-    
 }
 
 .side-bar-col {
@@ -20,4 +19,5 @@
 .main-col {
     background-color: #ffe5d9;
     padding: 0 !important;
+    height: 100%;
 }

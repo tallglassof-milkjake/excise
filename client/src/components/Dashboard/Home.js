@@ -5,13 +5,13 @@ import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
 import API from '../../utils/API';
 import { List, ListItem } from '../List/List';
 import { Form, Button } from 'react-bootstrap';
-
+import Search from '../Search/Search';
 import DashTable from '../DashTable/DashTable';
+import DataTable from 'react-data-table-component';
 
 import './Home.css';
 
 class Home extends Component {
-    // const [state, dispatch] = useStoreContext();
 
     headings = [
         { name: 'Date', width: '10%' },
@@ -25,18 +25,7 @@ class Home extends Component {
         <div className='dash-main'>
             <div className='dash-message'>
                 <h1 className='display-3'>Dashboard</h1>
-            </div>
-
-            <div className='row dash-row justify-content-center'>
-                <div className='col dash-col'>
-                    <Form className='search-form'>
-                        <Form.Group>
-                            <Form.Label>Search</Form.Label>
-                            <Form.Control type='text'  />
-                        </Form.Group>
-                        <Button type='submit'>Search</Button>
-                    </Form> 
-                </div>   
+                <Search />
             </div>
             
             <div className='row dash-table-row'>
@@ -46,7 +35,6 @@ class Home extends Component {
                     />
                 </div>
             </div>
-            
         </div>
     )
     }
