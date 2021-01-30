@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Hello from './components/Hello/Hello';
 import Dashboard from './pages/Dashboard';
 import Excise from './pages/Excise';
+import ViewPage from './pages/View';
 
 import Loading from './components/Loading/Loading';
 
@@ -29,6 +30,7 @@ function App() {
                   <ProtectedRoute path='/dashboard' exact component={Dashboard} />
                   <ProtectedRoute path='/excise' exact component={Excise} />
                   <ProtectedRoute path='/loading' exact component={Loading} />
+                  <ProtectedRoute path='/dashboard/:id' exact component={ViewPage} />
                 </Switch>
             </div>
         </div>

@@ -6,33 +6,25 @@ import API from '../../utils/API';
 import { List, ListItem } from '../List/List';
 import { Form, Button } from 'react-bootstrap';
 
-function DashData({ excise }) {
+function DashData({ excise, selectedExcise }) {
     
-    // const [state, dispatch] = useStoreContext();
+    // console.log(excise);
 
-    // const getExcise = () => {
-    //     dispatch({ type: LOADING });
-    //     API.getExcise()
-    //         .then(results => {
-    //             dispatch({
-    //                 type: UPDATE_EXCISE,
-    //                 excises: results.data
-    //             });
-    //         })
-    //         .catch(err => console.log(err));
-    // };
+    console.log(selectedExcise)
 
-    // useEffect(() => {
-    //     getExcise();
-    // }, []);
-    
     return (
         <tbody>
             {excise.map(excise => {
                 return(
-                <tr key={excise._id}>
+                <tr 
+                    key={excise._id}
+                >
                     <td data-th="Date">
-                        {excise.date}
+                        <Link 
+                            to={'/dashboard/' + excise._id}
+                        >
+                            {excise.date}
+                        </Link>
                     </td>
                     <td data-th='Product'>
                         {excise.product}

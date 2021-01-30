@@ -8,9 +8,14 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     findById: function(req, res) {
-        db.Excise.findById(req.params.id)
+        console.log(req.params._id);
+        // console.log(res);
+        db.Excise.findById(req.params._id)
             .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+            .catch(err => {
+                console.log(err);
+                res.status(500).json(err)
+            });
     },
     create: function(req, res) {
         console.log(req.body);
@@ -18,7 +23,8 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.log(err)
-                res.status(500).json(err)});
+                res.status(500).json(err)
+            });
     },
     update: function(req, res) {
         db.Excise.findOneAndUpdate({ _id: req.params.id }, req.body)

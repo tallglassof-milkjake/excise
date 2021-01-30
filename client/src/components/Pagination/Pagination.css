@@ -1,0 +1,11 @@
+.nav {
+    text-align: center;
+}
+
+.page-item {
+    display: inline;
+}
+
+.page-link {
+    display: inline-block;
+}

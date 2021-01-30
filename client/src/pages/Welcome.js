@@ -6,7 +6,7 @@ import '../styles/Welcome.css';
 
 const WelcomeMessage = () => {
     const { user } = useAuth0();
-    const { name, picture } = user;
+    // const { name, picture } = user;
 
     return (
         <>

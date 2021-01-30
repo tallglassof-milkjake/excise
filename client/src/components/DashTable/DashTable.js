@@ -27,15 +27,15 @@ const DashTable = ({ headings, handleSort }) => {
         fetch();
     }, []);
 
-    console.log(excise);
-
-    // Get current post
+    // console.log(excise);
 
     const indexOfLast = currentPage * itemPerPage;
     const indexOfFirst = indexOfLast - itemPerPage;
     const currentExcise = excise.slice(indexOfFirst, indexOfLast);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
+    // console.log(currentExcise);
 
     return (
         <>
@@ -60,7 +60,10 @@ const DashTable = ({ headings, handleSort }) => {
                         })}
                     </tr>
                 </thead>
-                <DashData excise={currentExcise}/>
+                <DashData 
+                    excise={currentExcise}
+                    selectedExcise={excise}
+                />
             </table>
             <Pagination itemPerPage={itemPerPage} totalExcise={excise.length} paginate={paginate} />
         </>

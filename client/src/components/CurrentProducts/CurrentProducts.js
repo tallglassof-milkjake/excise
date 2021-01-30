@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CurrentProducts.css';
 import WelcomeData from '../WelcomeData/WelcomeData';
+import API from '../../utils/API';
 
 const CurrentProducts = ({ headings }) => {
+
+    const [excise, setExcise] = useState();
+    
+    const [itemsPerPage, setItemsPerPage] = useState(3);
+
+    useEffect(() => {
+        const fetch = async () => {
+            const res = await API.getExcise();
+            setExcise(res.data);
+            console.log(res.data)
+        }
+
+        fetch();
+    }, [])
+
+    
+    // const indexOfFirst = indexOfLast - itemsPerPage;
+    // const currentExcise = excise.slice(indexOfFirst, indexOfLast);
+
     return (
         <table className='product-table table table-striped'>
             <thead>
@@ -18,7 +38,7 @@ const CurrentProducts = ({ headings }) => {
                     )
                 })}</tr>
             </thead>
-            <WelcomeData />
+            <WelcomeData itemsPerPage={itemsPerPage} excise={excise}/>
         </table>
     )
 }

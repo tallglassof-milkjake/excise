@@ -8,7 +8,12 @@ const Search = ({ handleSearchChange }) => {
                 <Form className='search-form'>
                     <Form.Group>
                         <Form.Label>Search</Form.Label>
-                        <Form.Control type='search' placeholder='Search' onChange={e => handleSearchChange(e)}  />
+                        <Form.Control 
+                            type='search'
+                            placeholder='Search'
+                            aria-label='search'
+                            onChange={e => handleSearchChange(e)}  
+                        />
                     </Form.Group>
                     <Button type='submit'>Search</Button>
                 </Form> 
