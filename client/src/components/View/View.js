@@ -21,8 +21,7 @@ const View = ({ excise }) => {
     ]
 
     useEffect(() => {
-        
-            const res = API.getExciseById();
+            const res = API.getExciseById(excise);
             setMyExcise(res.data);
             console.log(res.data);
         

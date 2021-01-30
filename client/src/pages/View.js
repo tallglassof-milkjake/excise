@@ -6,16 +6,19 @@ import API from '../utils/API';
 class ViewPage extends Component {
 
     state = {
-        excise: {},
+        result: {},
     }
 
     componentDidMount() {
-        
+        this.getExcise()
     }
 
-    getExcise = id => {
-        API.getExciseById(id)
-            .then(res => this.setState({ excise: res.data}))
+    getExcise = () => {
+        API.getExcise()
+            .then(res => {
+                this.setState({ result: res.data})
+                console.log(res.data)
+            })
             .catch(err => console.log(err));
     }
 
@@ -28,7 +31,7 @@ class ViewPage extends Component {
                 <div className='col-10 main-col'>
                     <div className='content-section'>
                         <View 
-                            excise={this.excise}
+                            excise={this.state.result._id}
                         />
                     </div>
                 </div>
