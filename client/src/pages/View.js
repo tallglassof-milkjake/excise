@@ -1,28 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import View from '../components/View/View';
 import SideBar from '../components/SideBar/Nav';
 import API from '../utils/API';
 
-class ViewPage extends Component {
+const ViewPage = () => {
 
-    state = {
-        result: {},
-    }
+    // const [myExcise, setMyExcise] = useState({});
 
-    componentDidMount() {
-        this.getExcise()
-    }
+    // useEffect(() => {
+    //     console.log(myExcise);
+        
+    // }, [myExcise]);
 
-    getExcise = () => {
-        API.getExcise()
-            .then(res => {
-                this.setState({ result: res.data})
-                console.log(res.data)
-            })
-            .catch(err => console.log(err));
-    }
+    // const getData = (() => {
+    //     const result = API.getExcise()
+    //     setMyExcise(result.data);
+    // })
+    
+    // getData();
 
-    render() {
+    // console.log(myExcise)
+
+    const [exciseId, setExciseId] = useState({})
+
+    
+
+    useEffect(() => {
+        setExciseId('hredgag')
+        console.log(exciseId);
+    }, []);
+
+    console.log(exciseId);
+    
         return (
             <>
                 <div className='col-2 side-bar-col'>
@@ -31,13 +40,13 @@ class ViewPage extends Component {
                 <div className='col-10 main-col'>
                     <div className='content-section'>
                         <View 
-                            excise={this.state.result._id}
+                            // excise={exciseId}
                         />
                     </div>
                 </div>
             </>
         )
-    }
+    
 }
 
 export default ViewPage;

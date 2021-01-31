@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ViewData from '../ViewData/ViewData';
 import API from '../../utils/API';
 
-const ViewTable = ({ headings, excise }) => {
-
+const ViewTable = ({ headings, excise }) => {    
+    
     console.log(excise)
 
-    // console.log(myExcise)
+    useEffect(() => {
+        console.log(excise)
+    }, [excise])
 
     return (
         <>

@@ -4,9 +4,9 @@ import ViewTable from '../ViewTable/ViewTable';
 
 const View = ({ excise }) => {
 
-    console.log(excise);
+    // console.log(excise);
 
-    const [myExcise, setMyExcise] = useState([]);
+    // const [myExcise, setMyExcise] = useState([]);
 
     const headings = [
         { name: 'Date', width: '10%' },
@@ -20,19 +20,19 @@ const View = ({ excise }) => {
         { name: 'Notes', width: '10%' },
     ]
 
-    useEffect(() => {
-            const res = API.getExciseById(excise);
-            setMyExcise(res.data);
-            console.log(res.data);
+    // useEffect(() => {
+    //         const res = API.getExciseById(excise);
+    //         setMyExcise(res.data);
+    //         console.log(res.data);
         
-    }, [])
+    // }, [])
     
 
     return (
         <div>
             <ViewTable 
                 headings={headings}
-                excise={myExcise}
+                excise={excise}
             />
         </div>
     )
