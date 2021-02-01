@@ -4,7 +4,7 @@ import API from '../../utils/API';
 
 const ViewTable = ({ headings, excise }) => {    
     
-    const [myExcise, setMyExcise] = useState()
+    const [myExcise, setMyExcise] = useState({})
     
     useEffect(() => {
         const fetch = async () => {
@@ -16,7 +16,7 @@ const ViewTable = ({ headings, excise }) => {
         fetch();    
     }, [])
 
-    // console.log(myExcise);
+    console.log(myExcise.product);
 
     return (
         <>
