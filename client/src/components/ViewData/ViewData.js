@@ -1,64 +1,61 @@
 import React, { useEffect, useState } from 'react';
 import API from '../../utils/API';
 
-const ViewData = ({ excise }) => {
+const ViewData = ({ id, data }) => {
 
-    const id = excise;
-
-    const [myExcise, setMyExcise] = useState()
-
-    useEffect(() => {
-        const fetch = async () => {
-            const res = await API.getExciseById(id);
-            console.log(res);
-            setMyExcise(res);
-        }
-
-        fetch();
-    }, [])
-
-    console.log(id);
 
     return (
         <tbody>
             <tr>
                 <td>
-
+                    <p>{data.description}</p>
                 </td>
             </tr>
         </tbody>
         // <tbody>
-        //     {excise.map(excise =>{
+        //     {exciseData.map(items => {
+        //         return (
+        //             <tr key={items._id}>
+        //                 <td data-th='Date'>
+        //                     {items.date}
+        //                 </td>
+        //             </tr>
+        //         )
+        //     })}
+                
+        // </tbody>
+        // <tbody>
+        //     {myExcise.map(myExcise =>{
         //         return(
         //             <tr
-        //                 key={excise._id}
+        //                 key={myExcise._id}
         //             >
         //                 <td data-th='Date'>
-        //                     {excise.date}
+        //                     {myExcise.date}
         //                 </td>
         //                 <td data-th='Product'>
-        //                     {excise.product}
+        //                     {myExcise.product}
         //                 </td>
         //                 <td data-th='Description'>
-        //                     {excise.description}
+        //                     {myExcise.description}
         //                 </td>
         //                 <td data-th='Vessel ID'>
-        //                     {excise.vessel_id}
+        //                     {myExcise.vessel_id}
         //                 </td>
         //                 <td data-th='Volume'>
-        //                     {excise.volume}
+        //                     {myExcise.volume}
         //                 </td>
         //                 <td data-th='Abv %'>
-        //                     {excise.abv }
+        //                     {myExcise.abv }
         //                 </td>
         //                 <td data-th='LALs'>
-        //                     {excise.lals}
+        //                     {myExcise.lals}
         //                 </td>
         //                 <td data-th='Employee'>
-        //                     {excise.employee}
+        //                     {myExcise.employee}
         //                 </td>
         //                 <td data-th='Notes'>
-        //                     {excise.notes}
+        //                     {myExcise.notes}
         //                 </td>
 
         //             </tr>

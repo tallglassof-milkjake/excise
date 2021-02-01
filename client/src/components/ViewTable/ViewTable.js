@@ -4,11 +4,19 @@ import API from '../../utils/API';
 
 const ViewTable = ({ headings, excise }) => {    
     
-    // console.log(excise)
+    const [myExcise, setMyExcise] = useState()
+    
+    useEffect(() => {
+        const fetch = async () => {
+            const res = await API.getExciseById(`/${excise}`);
+            console.log(res.data);
+            setMyExcise(res.data);
+        }
 
-    // useEffect(() => {
-    //     console.log(excise)
-    // }, [excise])
+        fetch();    
+    }, [])
+
+    // console.log(myExcise);
 
     return (
         <>
@@ -29,7 +37,8 @@ const ViewTable = ({ headings, excise }) => {
                     </tr>
                 </thead>
                 <ViewData 
-                    excise={excise}
+                    id={excise}
+                    data={myExcise}
                 />
             </table>
         </>

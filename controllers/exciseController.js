@@ -10,7 +10,7 @@ module.exports = {
     findById: function(req, res) {
         console.log(req.params._id);
         // console.log(res);
-        db.Excise.findById(req.params._id)
+        db.Excise.findOne(req.params._id)
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.log(err);

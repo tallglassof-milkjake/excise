@@ -8,8 +8,20 @@ const ViewPage = ({ ...props }) => {
     const newId = props.match.params.id;
 
     const [exciseId] = useState(newId);
-    
+    // const [myExcise, setMyExcise] = useState()
+
+    // useEffect(() => {
+    //     const fetch = async () => {
+    //         const res = await API.getExciseById(`/${newId}`);
+    //         console.log(res);
+    //         setMyExcise(res.data);
+    //     }
+
+    //     fetch();
+    // }, [])
+
     console.log(exciseId);
+    // console.log(myExcise);
     
         return (
             <>
