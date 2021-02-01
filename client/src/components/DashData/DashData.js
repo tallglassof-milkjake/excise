@@ -30,7 +30,7 @@ function DashData({ excise, selectedExcise }) {
                     <td data-th="Date">
                         <Link 
                             to={'/dashboard/' + excise._id}
-                            props={exciseId}
+                            props={excise._id}
                         >
                             {excise.date}
                         </Link>
