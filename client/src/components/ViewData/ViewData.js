@@ -1,17 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import API from '../../utils/API';
 
 const ViewData = ({ excise }) => {
-    
-    
+
+    const id = excise;
+
+    const [myExcise, setMyExcise] = useState()
 
     useEffect(() => {
-        console.log(excise);
-    }, [excise])
+        const fetch = async () => {
+            const res = await API.getExciseById(id);
+            console.log(res);
+            setMyExcise(res);
+        }
 
-    console.log(excise);
+        fetch();
+    }, [])
+
+    console.log(id);
 
     return (
-        <td></td>
+        <tbody>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        </tbody>
         // <tbody>
         //     {excise.map(excise =>{
         //         return(

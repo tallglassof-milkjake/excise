@@ -3,33 +3,12 @@ import View from '../components/View/View';
 import SideBar from '../components/SideBar/Nav';
 import API from '../utils/API';
 
-const ViewPage = () => {
+const ViewPage = ({ ...props }) => {
 
-    // const [myExcise, setMyExcise] = useState({});
+    const newId = props.match.params.id;
 
-    // useEffect(() => {
-    //     console.log(myExcise);
-        
-    // }, [myExcise]);
-
-    // const getData = (() => {
-    //     const result = API.getExcise()
-    //     setMyExcise(result.data);
-    // })
+    const [exciseId] = useState(newId);
     
-    // getData();
-
-    // console.log(myExcise)
-
-    const [exciseId, setExciseId] = useState({})
-
-    
-
-    useEffect(() => {
-        setExciseId('hredgag')
-        console.log(exciseId);
-    }, []);
-
     console.log(exciseId);
     
         return (
@@ -40,7 +19,7 @@ const ViewPage = () => {
                 <div className='col-10 main-col'>
                     <div className='content-section'>
                         <View 
-                            // excise={exciseId}
+                            excise={exciseId}
                         />
                     </div>
                 </div>

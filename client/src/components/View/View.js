@@ -19,13 +19,6 @@ const View = ({ excise }) => {
         { name: 'Employee', width: '10%' },
         { name: 'Notes', width: '10%' },
     ]
-
-    // useEffect(() => {
-    //         const res = API.getExciseById(excise);
-    //         setMyExcise(res.data);
-    //         console.log(res.data);
-        
-    // }, [])
     
 
     return (

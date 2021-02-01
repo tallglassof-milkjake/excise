@@ -4,11 +4,11 @@ import API from '../../utils/API';
 
 const ViewTable = ({ headings, excise }) => {    
     
-    console.log(excise)
+    // console.log(excise)
 
-    useEffect(() => {
-        console.log(excise)
-    }, [excise])
+    // useEffect(() => {
+    //     console.log(excise)
+    // }, [excise])
 
     return (
         <>

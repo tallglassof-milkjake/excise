@@ -30,7 +30,7 @@ function App() {
                   <ProtectedRoute path='/dashboard' exact component={Dashboard} />
                   <ProtectedRoute path='/excise' exact component={Excise} />
                   <ProtectedRoute path='/loading' exact component={Loading} />
-                  <ProtectedRoute path='/dashboard/:id' exact component={ViewPage} />
+                  <ProtectedRoute path='/dashboard/:id' exact component={ViewPage}/>
                 </Switch>
             </div>
         </div>
