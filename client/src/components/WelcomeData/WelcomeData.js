@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import API from '../../utils/API';
 
-function WelcomeData() {
-    const [exciseState, setExciseState] = useState();
-
-    const getExcise = () => {
-        const getExcise = async () => {
-            let results = API.getExcise();
-            setExciseState(results);
-        }
-
-        getExcise();
-    };
+function WelcomeData({ headings }) {
+    const [excise, setExcise] = useState();
 
     useEffect(() => {
+        const getExcise = async () => {
+            let results = API.getExcise();
+            setExcise(results);
+            console.log()
+        }
+
+        console.log(excise)
         getExcise();
     }, []);
 
     
     return(
         <tbody>
-            {exciseState.map(excise => {
+            {excise.map(excise => {
                 return(
                 <tr key={excise._id}>
                     <td data-th="Date">

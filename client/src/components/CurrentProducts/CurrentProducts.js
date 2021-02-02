@@ -19,10 +19,6 @@ const CurrentProducts = ({ headings }) => {
         fetch();
     }, [])
 
-    
-    // const indexOfFirst = indexOfLast - itemsPerPage;
-    // const currentExcise = excise.slice(indexOfFirst, indexOfLast);
-
     return (
         <table className='product-table table table-striped'>
             <thead>
