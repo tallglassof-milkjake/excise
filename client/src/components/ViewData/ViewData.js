@@ -1,13 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { Component } from 'react';
+import { useParams } from 'react-router-dom';
 import API from '../../utils/API';
 
-const ViewData = ({ id, data }) => {
+class ViewData extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {id: this.props.id}
+    }
 
+    componentDidMount() {
+        console.log(this.state.id)
+
+        const getData = async () => {
+            const data = await API.getExciseById('/' + this.state.id);
+
+            console.log(data)
+        }
+
+        getData();
+    }
+
+    getParams = () => {
+        const params = useParams();
+
+        console.log(params);
+    }
+
+    render() {
     return (
         <tbody>
             <tr>
-                <td>
+                {/* <td>
                     {data.date}
                 </td>
                 <td>
@@ -33,11 +57,12 @@ const ViewData = ({ id, data }) => {
                 </td>
                 <td>
                     {data.notes}
-                </td>
+                </td> */}
             </tr>
             
         </tbody>
     )
+    }
 }
 
 export default ViewData;

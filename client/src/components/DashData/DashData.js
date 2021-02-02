@@ -1,36 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import { useStoreContext } from '../../utils/GlobalState';
-import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
-import API from '../../utils/API';
-import { List, ListItem } from '../List/List';
-import { Form, Button } from 'react-bootstrap';
-
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import { BrowserRouter as  Route, Switch, Link, useParams, useRouteMatch } from "react-router-dom";
 import ViewPage from '../../pages/View';
+import API from '../../utils/API';
 
-function DashData({ excise, selectedExcise }) {
-    
-    // console.log(excise);
-    const [exciseId, setExciseId] = useState();
+function DashData() {
+
+    const [exciseData, setExciseData] = useState([]);
 
     useEffect(() => {
-        const results = excise._id;
-        setExciseId(results);
-    }, [])
+        const fetch = async () => {
+            const res = await API.getExcise();
+            setExciseData(res.data);
+        }
 
-    console.log(selectedExcise)
+        fetch();
+    }, []);
+
+    let { path, url } = useRouteMatch();
+    let { id } = useParams();
 
     return (
+        <>
         <tbody>
-            {excise.map(excise => {
+            {exciseData.map(excise => {
                 return(
                 <tr 
                     key={excise._id}
                 >
                     <td data-th="Date">
                         <Link 
-                            to={'/dashboard/' + excise._id}
-                            props={excise._id}
+                            to={`${url}/${id}`}
                         >
                             {excise.date}
                         </Link>
@@ -48,6 +48,13 @@ function DashData({ excise, selectedExcise }) {
                 )
             })}
         </tbody>
+        <Switch>
+            <ProtectedRoute path={`${path}/${id}`}>
+                <ViewPage/>
+            </ProtectedRoute>
+        </Switch>
+        
+        </>
     )
 }
 

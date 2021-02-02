@@ -9,9 +9,12 @@ module.exports = {
     },
     findById: function(req, res) {
         console.log(req.params._id);
-        // console.log(res);
+        console.log(req);
         db.Excise.findOne(req.params._id)
-            .then(dbModel => res.json(dbModel))
+            .then(dbModel => {
+                console.log(dbModel);
+                res.json(dbModel)
+            })
             .catch(err => {
                 console.log(err);
                 res.status(500).json(err)

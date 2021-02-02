@@ -1,13 +1,14 @@
-import React, { Component, useEffect, useState } from 'react';
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import View from '../components/View/View';
 import SideBar from '../components/SideBar/Nav';
-import API from '../utils/API';
 
 const ViewPage = ({ ...props }) => {
 
-    const newId = props.match.params.id;
+    // const idProps = props.match.params.id;
+    console.log(props.match.params.id);
 
-    const [exciseId] = useState(newId);
+    // const [exciseId] = useState(idProps);
     // const [myExcise, setMyExcise] = useState()
 
     // useEffect(() => {
@@ -20,8 +21,12 @@ const ViewPage = ({ ...props }) => {
     //     fetch();
     // }, [])
 
-    console.log(exciseId);
+    // console.log(exciseId);
     // console.log(myExcise);
+
+    const params = useParams();
+
+    console.log(params);
     
         return (
             <>
@@ -31,7 +36,7 @@ const ViewPage = ({ ...props }) => {
                 <div className='col-10 main-col'>
                     <div className='content-section'>
                         <View 
-                            excise={exciseId}
+                            props={params}
                         />
                     </div>
                 </div>

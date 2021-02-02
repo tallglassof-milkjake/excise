@@ -7,7 +7,7 @@ const CurrentProducts = ({ headings }) => {
 
     const [excise, setExcise] = useState();
     
-    const [itemsPerPage, setItemsPerPage] = useState(3);
+    const [itemsPerPage] = useState(3);
 
     useEffect(() => {
         const fetch = async () => {

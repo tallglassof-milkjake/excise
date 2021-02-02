@@ -1,31 +1,15 @@
-import React, { useEffect, useState } from 'react';
-// import { Link } from "react-router-dom";
-import { useStoreContext } from '../../utils/GlobalState';
-import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
-import API from '../../utils/API';
-// import { List, ListItem } from '../List/List';
-import { Form, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
 import DashData from '../DashData/DashData';
-import Search from '../Search/Search';
 import './DashTable.css';
-import axios from 'axios';
 import Pagination from '../Pagination/Pagination';
 
-const DashTable = ({ headings, handleSort }) => {
+const DashTable = ({ headings, handleSort, excise}) => {
 
-    const [excise, setExcise] = useState([]);
+    
     const [currentPage, setCurrentPage] = useState(1);
     const [itemPerPage] = useState(6);
 
-    useEffect(() => {
-        const fetch = async () => {
-            const res = await API.getExcise();
-            setExcise(res.data);
-            console.log(res.data);
-        }
-
-        fetch();
-    }, []);
+    
 
     // console.log(excise);
 
@@ -60,9 +44,8 @@ const DashTable = ({ headings, handleSort }) => {
                         })}
                     </tr>
                 </thead>
-                <DashData 
-                    excise={currentExcise}
-                    selectedExcise={excise}
+                <DashData
+                    currentExcise={currentExcise}
                 />
             </table>
             <Pagination itemPerPage={itemPerPage} totalExcise={excise.length} paginate={paginate} />

@@ -6,7 +6,7 @@ export default {
     },
 
     getExciseById: function(id) {
-        return axios.get(`/api/excise/${id}`);
+        return axios.get('/api/excise/' + id);
     },
 
     deleteExcise: function(id) {

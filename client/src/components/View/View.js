@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import API from '../../utils/API';
+import React from 'react';
 import ViewTable from '../ViewTable/ViewTable';
 
-const View = ({ excise }) => {
+const View = ({ props }) => {
 
     // console.log(excise);
 
@@ -25,7 +24,7 @@ const View = ({ excise }) => {
         <div>
             <ViewTable 
                 headings={headings}
-                excise={excise}
+                props={props}
             />
         </div>
     )

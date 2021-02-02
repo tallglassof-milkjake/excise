@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import { useStoreContext } from '../../utils/GlobalState';
-import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
 import API from '../../utils/API';
-import { List, ListItem } from '../List/List';
-import { Form, Button } from 'react-bootstrap';
 import Search from '../Search/Search';
 import DashTable from '../DashTable/DashTable';
-import DataTable from 'react-data-table-component';
+
 
 import './Home.css';
 
 const Home = () => {
 
     const [excise, setExcise] = useState([]);
-    const [filteredItems, setFilteredItems] = useState();
+    const [filteredItems, setFilteredItems] = useState({});
     const [order, setOrder] = useState('descend')
 
     const headings = [
@@ -88,7 +83,6 @@ const Home = () => {
         
        fetch();
     }, []);
-
     
     return (
         <div className='dash-main'>
@@ -101,7 +95,7 @@ const Home = () => {
                 <div className='col dash-table-col'>
                     <DashTable 
                         headings={headings}
-                        
+                        excise={excise}
                         handleSort={handleSort}
                     />
                 </div>

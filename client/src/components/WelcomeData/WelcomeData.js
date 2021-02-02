@@ -1,24 +1,16 @@
-import React, { useEffect } from 'react';
-import { Link } from "react-router-dom";
-import { useStoreContext } from '../../utils/GlobalState';
-import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
+import React, { useEffect, useState } from 'react';
 import API from '../../utils/API';
-import { List, ListItem } from '../List/List';
-import { Form, Button } from 'react-bootstrap';
 
 function WelcomeData() {
-    const [state, dispatch] = useStoreContext();
+    const [exciseState, setExciseState] = useState();
 
     const getExcise = () => {
-        dispatch({ type: LOADING });
-        API.getExcise()
-            .then(results => {
-                dispatch({
-                    type: UPDATE_EXCISE,
-                    excises: results.data
-                });
-            })
-            .catch(err => console.log(err));
+        const getExcise = async () => {
+            let results = API.getExcise();
+            setExciseState(results);
+        }
+
+        getExcise();
     };
 
     useEffect(() => {
@@ -28,7 +20,7 @@ function WelcomeData() {
     
     return(
         <tbody>
-            {state.excises.map(excise => {
+            {exciseState.map(excise => {
                 return(
                 <tr key={excise._id}>
                     <td data-th="Date">

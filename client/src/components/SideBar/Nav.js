@@ -1,12 +1,9 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import { useAuth0, } from "@auth0/auth0-react";
 import UserInfo from '../UserInfo/UserInfo';
 import './Nav.css';
 
 function NavBar() {
-    const user = useAuth0();
-    const { name, picture } = user;
 
     return (
             <div className=' side-bar-items'>

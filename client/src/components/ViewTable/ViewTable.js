@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ViewData from '../ViewData/ViewData';
-import API from '../../utils/API';
 
-const ViewTable = ({ headings, excise }) => {    
-    
-    const [myExcise, setMyExcise] = useState({})
-    
-    useEffect(() => {
-        const fetch = async () => {
-            const res = await API.getExciseById(`/${excise}`);
-            console.log(res.data);
-            setMyExcise(res.data);
-        }
-
-        fetch();    
-    }, [])
-
-    console.log(myExcise.product);
+const ViewTable = ({ headings, props }) => {    
 
     return (
         <>
@@ -37,8 +22,7 @@ const ViewTable = ({ headings, excise }) => {
                     </tr>
                 </thead>
                 <ViewData 
-                    id={excise}
-                    data={myExcise}
+                    id={props}
                 />
             </table>
         </>
