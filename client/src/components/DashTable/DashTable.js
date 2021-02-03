@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DashData from '../DashData/DashData';
 import './DashTable.css';
 import Pagination from '../Pagination/Pagination';
+import API from '../../utils/API';
 
 const DashTable = ({ headings, handleSort, excise}) => {
 
-    
     const [currentPage, setCurrentPage] = useState(1);
     const [itemPerPage] = useState(6);
 
-    
-
-    // console.log(excise);
+    console.log(excise);
 
     const indexOfLast = currentPage * itemPerPage;
     const indexOfFirst = indexOfLast - itemPerPage;
@@ -19,7 +17,7 @@ const DashTable = ({ headings, handleSort, excise}) => {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
-    // console.log(currentExcise);
+    console.log(currentExcise);
 
     return (
         <>
@@ -46,6 +44,7 @@ const DashTable = ({ headings, handleSort, excise}) => {
                 </thead>
                 <DashData
                     currentExcise={currentExcise}
+                    excise={excise}
                 />
             </table>
             <Pagination itemPerPage={itemPerPage} totalExcise={excise.length} paginate={paginate} />

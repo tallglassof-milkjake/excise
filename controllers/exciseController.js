@@ -8,9 +8,9 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     findById: function(req, res) {
-        console.log(req.params._id);
-        console.log(req);
-        db.Excise.findOne(req.params._id)
+        // console.log(req.params._id);
+        // console.log(req);
+        db.Excise.findOne({ _id: req.params.id })
             .then(dbModel => {
                 console.log(dbModel);
                 res.json(dbModel)

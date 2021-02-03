@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom';
 import View from '../components/View/View';
 import SideBar from '../components/SideBar/Nav';
 
-const ViewPage = ({ ...props }) => {
+const ViewPage = ({ id, ...props }) => {
 
     // const idProps = props.match.params.id;
     console.log(props.match.params.id);
+    
 
     // const [exciseId] = useState(idProps);
     // const [myExcise, setMyExcise] = useState()

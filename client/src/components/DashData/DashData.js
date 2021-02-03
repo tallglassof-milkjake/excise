@@ -1,36 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import { BrowserRouter as  Route, Switch, Link, useParams, useRouteMatch } from "react-router-dom";
-import ViewPage from '../../pages/View';
+
 import API from '../../utils/API';
 
-function DashData() {
-
-    const [exciseData, setExciseData] = useState([]);
-
-    useEffect(() => {
-        const fetch = async () => {
-            const res = await API.getExcise();
-            setExciseData(res.data);
-        }
-
-        fetch();
-    }, []);
+function DashData({ excise, currentExcise }) {
 
     let { path, url } = useRouteMatch();
     let { id } = useParams();
 
+    console.log(path);
+    console.log(id);
+
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+        
+    //     console.log({id});
+    // }
+
     return (
         <>
         <tbody>
-            {exciseData.map(excise => {
+            {currentExcise.map(excise => {
                 return(
                 <tr 
                     key={excise._id}
                 >
                     <td data-th="Date">
                         <Link 
-                            to={`${url}/${id}`}
+                            to={`/dashboard/${excise._id}`}
+                            // onClick={handleClick}
+                            id={excise._id}
                         >
                             {excise.date}
                         </Link>
@@ -48,12 +48,6 @@ function DashData() {
                 )
             })}
         </tbody>
-        <Switch>
-            <ProtectedRoute path={`${path}/${id}`}>
-                <ViewPage/>
-            </ProtectedRoute>
-        </Switch>
-        
         </>
     )
 }
