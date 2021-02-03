@@ -38,54 +38,45 @@ class ViewData extends Component {
         console.log(this.state.data)
     return (
         <>
-        <table className='table table-striped'>  
-            <thead>
-                <tr>
-                    {this.state.headings.map(({name, width}) => {
-                        return (
-                            <th
-                                className='col'
-                                key={name}
-                                style={{width}}
-                            >
-                                {name}
-                            </th>
-                        )
-                    })}
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-th="Date">
-                        {this.state.data.date}
-                    </td>
-                    <td>
-                        {this.state.data.product}
-                    </td>
-                    <td>
-                        {this.state.data.description}
-                    </td>
-                    <td>
-                        {this.state.data.vessel_id}
-                    </td>
-                    <td>
-                        {this.state.data.volume}
-                    </td>
-                    <td>
-                        {this.state.data.abv}
-                    </td>
-                    <td>
-                        {this.state.data.lals}
-                    </td>
-                    <td>
-                        {this.state.data.employee}
-                    </td>
-                    <td>
-                        {this.state.data.notes}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div className='card'>
+            <h1>
+                Product: {this.state.data.product}
+            </h1>
+            <p>
+                Date: {this.state.data.date}
+            </p>
+            <p>
+                Description {this.state.data.description}
+            </p>
+        </div>
+        <div className='card'>
+            <h1>
+                Excise Numbers
+            </h1>
+            <p>
+                Vessel: {this.state.data.vessel_id}
+            </p>
+            <p>
+                Volume: {this.state.data.volume}
+            </p>
+            <p>
+                Abv: {this.state.data.abv}
+            </p>
+            <p>
+                LaLs: {this.state.data.lals}
+            </p>
+        </div>
+        <div className='card'>
+            <h1>
+                Other Information
+            </h1>
+            <p>
+                {this.state.data.employee}
+            </p>
+            <p>
+                {this.state.data.notes}
+            </p>
+        </div>
         </>
     )
     }
