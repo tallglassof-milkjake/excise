@@ -5,7 +5,7 @@ import API from '../../utils/API';
 
 const CurrentProducts = ({ headings }) => {
 
-    const [excise, setExcise] = useState();
+    const [excise, setExcise] = useState({});
     
     const [itemsPerPage] = useState(3);
 
@@ -18,6 +18,8 @@ const CurrentProducts = ({ headings }) => {
 
         fetch();
     }, [])
+
+    console.log(excise);
 
     return (
         <table className='product-table table table-striped'>

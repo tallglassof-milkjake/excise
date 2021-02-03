@@ -1,24 +1,33 @@
 import React, { useEffect, useState } from 'react';
+import { useStoreContext } from '../../utils/GlobalState';
+import { LOADING, UPDATE_EXCISE } from '../../utils/actions';
 import API from '../../utils/API';
 
-function WelcomeData({ headings }) {
-    const [excise, setExcise] = useState();
+function WelcomeData() {
+    const [state, dispatch] = useStoreContext();
+    const [exciseState, setExciseState] = useState();
+
+    const getExcise = () => {
+        dispatch({ type: LOADING });
+        API.getExcise()
+            .then(results => {
+                dispatch({
+                    type: UPDATE_EXCISE,
+                    excises: results.data
+                });
+            })
+            .catch(err => console.log(err));
+    };
 
     useEffect(() => {
-        const getExcise = async () => {
-            let results = API.getExcise();
-            setExcise(results);
-            console.log()
-        }
-
-        console.log(excise)
         getExcise();
     }, []);
 
+    console.log(state);
     
     return(
         <tbody>
-            {excise.map(excise => {
+            {state.excises.map(excise => {
                 return(
                 <tr key={excise._id}>
                     <td data-th="Date">
