@@ -85,22 +85,29 @@ const Home = () => {
     }, []);
     
     return (
-        <div className='dash-main'>
-            <div className='dash-message'>
-                <h1 className='display-3'>Dashboard</h1>
-                <Search handleSearchChange={handleSearchChange}/>
-            </div>
-            
-            <div className='row dash-table-row'>
-                <div className='col dash-table-col'>
-                    <DashTable 
-                        headings={headings}
-                        excise={excise}
-                        handleSort={handleSort}
-                    />
-                </div>
-            </div>
+      <div className='row head-row'>
+        <div className='col'>
+          <div className='row dash-main'>
+              <div className='col dash-message'>
+                  <h1 className='display-4 dash-title'>Dashboard</h1>
+                  <p>
+                    View and Edit product details
+                  </p>
+                  {/* <Search handleSearchChange={handleSearchChange}/> */}
+              </div>
+              
+              <div className='row dash-table-row'>
+                  <div className='col dash-table-col justify-content-center'>
+                      <DashTable 
+                          headings={headings}
+                          excise={excise}
+                          handleSort={handleSort}
+                      />
+                  </div>
+              </div>
+          </div>
         </div>
+      </div>
     )
     
 }

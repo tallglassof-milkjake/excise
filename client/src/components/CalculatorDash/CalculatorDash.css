@@ -1,0 +1,33 @@
+.calculator-head {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+.calc-card {
+    margin-right: 2.5rem !important;
+    border: 2px solid #41A4F0 !important;
+    height: 100%;
+}
+
+.calc-btn {
+    background-color: #F05D59 !important;
+    border: #F05D59 !important;
+    width: fit-content !important;
+    align-self: center;
+    margin-top: 2.5rem !important;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-head {
+    padding-bottom: 1.5rem;
+}
+
+.calc-text {
+    margin-left: 1.5rem;
+}
+
+.fa-calculator {
+    margin-right: 1.5rem;
+    color: #41A4F0;
+}

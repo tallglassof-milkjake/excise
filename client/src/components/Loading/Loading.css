@@ -1,5 +1,5 @@
 .load-row {
-    background-color: #ffe5d9;
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/10/03/12/pattern-2054297_1280.jpg');
     width: 100%;
     height: 100% !important;
     margin: 0 !important;
@@ -20,7 +20,7 @@
 }
 
 .fa-spinner {
-    color: #246CA3;
+    color: #F05D59;
     animation-name: spin;
     animation-duration: 2000ms;
     animation-iteration-count: infinite;

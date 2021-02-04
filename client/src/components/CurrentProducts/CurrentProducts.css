@@ -1,3 +1,30 @@
 table {
     border-color: black;
 }
+
+.current-products {
+    margin-left: 2.5rem !important;
+    margin-right: 2.5rem !important;
+    border: 2px solid #41A4F0 !important;
+    height: 100%;
+}
+
+.recent-entries-text {
+    
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+.product-table {
+    margin-bottom: 2.5rem !important;
+}
+
+.pagination {
+    margin-left: 1.5rem !important;
+    margin-bottom: 1.5rem;
+}
+
+.fa-book-open {
+    margin-right: 1.5rem;
+    color: #41A4F0;
+}

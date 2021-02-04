@@ -1,10 +1,11 @@
 .sidebar-menu-item {
-    color: white;
+    color: #F5F5F5;
     font-size: large;
+    font-family: 'Cinzel', serif;
 }
 
 .sidebar-menu-item:hover {
-    color: #246CA3;
+    color: #F05D59;
     
 }
 

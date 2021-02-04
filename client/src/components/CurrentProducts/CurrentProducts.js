@@ -2,42 +2,64 @@ import React, { useEffect, useState } from 'react';
 import './CurrentProducts.css';
 import WelcomeData from '../WelcomeData/WelcomeData';
 import API from '../../utils/API';
+import Pagination from '../Pagination/Pagination';
+import './CurrentProducts.css';
 
-const CurrentProducts = ({ headings }) => {
-
-    const [excise, setExcise] = useState({});
+const CurrentProducts = ({ headings, excise }) => {
     
-    const [itemsPerPage] = useState(3);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemPerPage] = useState(3);
 
-    useEffect(() => {
-        const fetch = async () => {
-            const res = await API.getExcise();
-            setExcise(res.data);
-            console.log(res.data)
-        }
+    const indexOfLast = currentPage * itemPerPage;
+    const indexOfFirst = indexOfLast - itemPerPage;
+    const currentExcise = excise.slice(indexOfFirst, indexOfLast);
 
-        fetch();
-    }, [])
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     console.log(excise);
 
     return (
-        <table className='product-table table table-striped'>
-            <thead>
-                <tr>{headings.map(({name, width}) => {
-                    return (
-                        <th
-                            className='col'
-                            key={name}
-                            style={{width}}
-                        >
-                            {name}
-                        </th>
-                    )
-                })}</tr>
-            </thead>
-            <WelcomeData itemsPerPage={itemsPerPage} excise={excise}/>
-        </table>
+        <>
+        <div className='card current-products'>
+            <div className='card-body'>
+                <div className='row card-head'>
+                    <div className='col'>
+                        <h3 className='card-title recent-entries-text text-left'>
+                            <i className="fas fa-book-open fa-2x"></i>
+                            Recent Entries
+                        </h3> 
+                    </div>
+                </div>
+                
+                <table className='product-table table table-striped'>
+                    <thead>
+                        <tr>{headings.map(({name, width}) => {
+                            return (
+                                <th
+                                    className='col'
+                                    key={name}
+                                    style={{width}}
+                                >
+                                    {name}
+                                </th>
+                            )
+                        })}</tr>
+                    </thead>
+                    <WelcomeData excise={excise} currentExcise={currentExcise}/>
+                </table>
+                <div className='row justify-content-center'>
+                    <div className='col'>
+                        <Pagination 
+                            className='product-pagination' 
+                            itemPerPage={itemPerPage} 
+                            totalExcise={excise.length} 
+                            paginate={paginate}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        </>
     )
 }
 

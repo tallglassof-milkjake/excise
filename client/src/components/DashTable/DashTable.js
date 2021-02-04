@@ -9,8 +9,6 @@ const DashTable = ({ headings, handleSort, excise}) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemPerPage] = useState(6);
 
-    console.log(excise);
-
     const indexOfLast = currentPage * itemPerPage;
     const indexOfFirst = indexOfLast - itemPerPage;
     const currentExcise = excise.slice(indexOfFirst, indexOfLast);
@@ -21,8 +19,7 @@ const DashTable = ({ headings, handleSort, excise}) => {
 
     return (
         <>
-            
-        <hr/>
+        <div className='card dash-card'>
             <table className='table table-striped dashboard-table'>
                 <thead>
                     <tr>
@@ -48,6 +45,7 @@ const DashTable = ({ headings, handleSort, excise}) => {
                 />
             </table>
             <Pagination itemPerPage={itemPerPage} totalExcise={excise.length} paginate={paginate} />
+        </div>
         </>
     )
 }

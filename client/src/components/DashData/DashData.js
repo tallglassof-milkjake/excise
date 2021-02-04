@@ -12,12 +12,6 @@ function DashData({ excise, currentExcise }) {
     console.log(path);
     console.log(id);
 
-    // const handleClick = (e) => {
-    //     e.preventDefault();
-        
-    //     console.log({id});
-    // }
-
     return (
         <>
         <tbody>
