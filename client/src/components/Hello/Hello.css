@@ -1,0 +1,29 @@
+.hello-row {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 !important;
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/10/03/12/pattern-2054297_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.col {
+    align-items: center;
+    padding: 0 !important;
+}
+
+.card {
+    align-self: center;
+    width: 350px;
+    margin: 0;
+    background-color: #F5F5F5;
+}
+
+.card-content {
+    padding: 3rem 1.5rem 3rem 1.5rem;
+}
+
+.login-heading, p {
+    font-family: 'Cinzel', serif;
+}

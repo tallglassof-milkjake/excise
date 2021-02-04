@@ -3,15 +3,29 @@
 }
 
 .welcome-message {
-    background-color: #F0824E;
+    background-color: #F5F5F5;
     border-radius: 15px 15px 0 0;
     padding: .5rem .5rem .5rem .5rem;
     margin: 0;
-    font-weight: 300 !important;
+    font-weight: lighter !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user {
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5rem;
 }
 
 .welcome-text {
-    margin-top: .5rem;
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter !important;
+}
+
+.welcome-card {
+    width: fit-content !important;
+    background-color: #F5F5F5 !important;
 }
 
 hr {

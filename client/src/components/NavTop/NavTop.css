@@ -1,3 +1,8 @@
-#logout-btn:hover {
-    color: #F0824E !important;
+.excise {
+    padding-right: 1rem;
+    color: gold;
+}
+
+.navhead {
+    font-family: 'Cinzel', serif;
 }

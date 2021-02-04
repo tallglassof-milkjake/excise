@@ -14,6 +14,7 @@
 
 .user-info {
     text-align: center;
+    max-width: inherit;
 }
 
 .menu-list {

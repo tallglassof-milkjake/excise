@@ -9,7 +9,7 @@ const UserInfo = () => {
     return (
         <>
             <h1 className='user-heading'>Welcome</h1>
-            <h2 className='user-name'>{name}</h2>
+            <p className='user-name'>{name}</p>
             
             <img 
                 src={picture}
