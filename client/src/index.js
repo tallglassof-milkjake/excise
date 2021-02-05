@@ -9,14 +9,11 @@ import './styles/index.css';
 ReactDOM.render(
     
     <Router>
-        {console.log(process.env.REACT_APP_DEPLOYED_REDIRECT)}
-        {/* {console.log(process.env.REACT_APP_AFTER_LOGIN)} */}
         <Auth0ProviderWithHistory
             domain={process.env.REACT_APP_AUTH0_DOMAIN}
             clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
             redirectUri={process.env.REACT_APP_AFTER_LOGIN}
             // deployedRedirect={process.env.REACT_APP_DEPLOYED_REDIRECT}
-            // secret={process.env.SECRET}
         >
             <App />
         </Auth0ProviderWithHistory>
