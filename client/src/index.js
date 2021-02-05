@@ -16,6 +16,7 @@ ReactDOM.render(
             clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
             redirectUri={process.env.REACT_APP_AFTER_LOGIN}
             deployedRedirect={process.env.REACT_APP_DEPLOYED_REDIRECT}
+            secret={process.env.SECRET}
         >
             <App />
         </Auth0ProviderWithHistory>

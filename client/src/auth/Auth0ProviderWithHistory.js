@@ -7,20 +7,22 @@ const Auth0ProviderWithHistory = ({ children }) => {
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
   const redirect = process.env.REACT_APP_AFTER_LOGIN;
   const deployedRedirect = process.env.REACT_APP_DEPLOYED_REDIRECT;
+  const SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
   const history = useHistory();
 
-  // const onRedirectCallback = (appState) => {
-  //   history.push(appState?.returnTo || window.location.pathname);
-  // };
+  const onRedirectCallback = (appState) => {
+    history.push(appState?.returnTo || window.location.pathname);
+  };
 
   return (
     <Auth0Provider
       domain={domain}
       clientId={clientId}
       redirectUri={redirect}
-      // onRedirectCallback={onRedirectCallback}
+      onRedirectCallback={onRedirectCallback}
       deployedRedirect={deployedRedirect}
+      secret={SECRET}
     >
       {children}
     </Auth0Provider>
