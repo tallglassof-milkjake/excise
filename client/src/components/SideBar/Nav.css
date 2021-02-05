@@ -5,8 +5,7 @@
 }
 
 .sidebar-menu-item:hover {
-    color: #F05D59;
-    
+    color: #F05D59;   
 }
 
 .sidebar-img {
@@ -19,10 +18,30 @@
 }
 
 .menu-list {
-    padding: 2rem 0 0 2.5rem;
+    padding: 2rem 0 0 2rem;
+    height: 100%;
+    margin-bottom: 50px;
 }
 
-.fa-chevron-circle-down {
-    transform: rotate(270deg);
-    margin-right: .5rem;
+.menu-icon {
+    color: #F5F5F5 !important;
+    margin: 0 .5rem 0 0 !important;
+    /* margin-right: .5rem !important; */
+}
+
+.menu-icon:hover {
+    color: #F05D59;
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

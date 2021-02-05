@@ -19,62 +19,6 @@ const Home = () => {
         { name: 'Abv %', width: '10%' },
     ]
 
-    const handleSort = headings => {
-        if (order === "descend") {
-          setOrder({
-            order: "ascend"
-          })
-        } else {
-            setOrder({
-            order: "descend"
-          })
-        }
-    
-        const compare = (a, b) => {
-          if (order === "ascend") {
-            
-            if (a[headings] === undefined) {
-              return 1;
-            } else if (b[headings] === undefined) {
-              return -1;
-            }
-            
-            else if (headings === "name") {
-              return a[headings].first.localeCompare(b[headings].first);
-            } else {
-              return a[headings] - b[headings];
-            }
-          } else {
-            
-            if (a[headings] === undefined) {
-              return 1;
-            } else if (b[headings] === undefined) {
-              return -1;
-            }
-            
-            else if (headings === "name") {
-              return b[headings].first.localeCompare(a[headings].first);
-            } else {
-              return b[headings] - a[headings];
-            }
-           }
-    
-        }
-        const sortedItems = filteredItems.sort(compare);
-        setOrder({ filteredItems: sortedItems });
-      }
-    
-
-    const handleSearchChange = event => {
-        console.log(excise);
-        const filter = event.target.value;
-        const filterList = excise.filter(item => {
-            let values = Object.values(item).join("").toLowerCase();
-            return values.indexOf(filter.toLowerCase()) !== -1;
-        });
-        setFilteredItems({ filteredItems: filterList });
-    }
-
     useEffect(() => {
         const fetch = async () => {
             const res = await API.getExcise();
@@ -90,6 +34,7 @@ const Home = () => {
           <div className='row dash-main'>
               <div className='col dash-message'>
                   <h1 className='display-4 dash-title'>Dashboard</h1>
+                  <i className="fas fa-tachometer-alt fa-4x"></i>
                   <p>
                     View and Edit product details
                   </p>
@@ -101,7 +46,6 @@ const Home = () => {
                       <DashTable 
                           headings={headings}
                           excise={excise}
-                          handleSort={handleSort}
                       />
                   </div>
               </div>

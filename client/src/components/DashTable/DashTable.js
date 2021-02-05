@@ -26,12 +26,9 @@ const DashTable = ({ headings, handleSort, excise}) => {
                         {headings.map(({ name, width}) => {
                             return (
                                 <th
-                                    className='col'
+                                    className='col headings'
                                     key={name}
                                     style={{width}}
-                                    onClick={() => {
-                                        handleSort(name.toLowerCase())
-                                    }}
                                 >
                                     {name}
                                 </th>

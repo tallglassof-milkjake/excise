@@ -27,7 +27,10 @@ const CurrentProducts = ({ headings, excise }) => {
                         <h3 className='card-title recent-entries-text text-left'>
                             <i className="fas fa-book-open fa-2x"></i>
                             Recent Entries
-                        </h3> 
+                        </h3>
+                        <p className='text-left current-text'>
+                            Quick access latest additions to the database
+                        </p>
                     </div>
                 </div>
                 
@@ -36,7 +39,7 @@ const CurrentProducts = ({ headings, excise }) => {
                         <tr>{headings.map(({name, width}) => {
                             return (
                                 <th
-                                    className='col'
+                                    className='col headings'
                                     key={name}
                                     style={{width}}
                                 >
@@ -48,7 +51,7 @@ const CurrentProducts = ({ headings, excise }) => {
                     <WelcomeData excise={excise} currentExcise={currentExcise}/>
                 </table>
                 <div className='row justify-content-center'>
-                    <div className='col'>
+                    <div className='col justify-content-center'>
                         <Pagination 
                             className='product-pagination' 
                             itemPerPage={itemPerPage} 

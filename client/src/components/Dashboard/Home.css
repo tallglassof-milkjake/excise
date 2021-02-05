@@ -7,6 +7,7 @@
 .head-row {
   width: 100%;
   margin: 0 !important;
+  padding-bottom: 2.5rem;
 }
 
 .dash-title {
@@ -40,4 +41,9 @@
 .dash-table-col {
   width: 100%;
   padding: 0 !important;
+}
+
+.fa-tachometer-alt {
+  margin: 1rem 0 1.5rem 0;
+  color: #41A4F0;
 }

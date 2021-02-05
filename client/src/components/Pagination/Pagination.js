@@ -10,9 +10,9 @@ const Pagination = ({ itemPerPage, totalExcise, paginate }) => {
     }
     return(
         <nav className='pagination'>
-            <ul className='nav'>
+            <ul className='nav mx-auto'>
                 {pageNumbers.map(number => (
-                    <li key={number} className='page-item'>
+                    <li key={number} className='page-item text-center'>
                         <a onClick={(e) => {
                             e.preventDefault();
                             paginate(number)

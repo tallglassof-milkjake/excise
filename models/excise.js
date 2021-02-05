@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const exciseSchema = new Schema({
-    date: { type: Date, default: Date.now },
+    date: { type: Date,  },
     product: { type: String },
     description: { type: String },
     vessel_id: { type: String },

@@ -16,8 +16,30 @@
 
 .excise-form {
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 hr {
     margin-left: 0 !important;
+}
+
+.excise-head {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal !important;
+}
+
+.form-label {
+    font-weight: 500 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    font-weight: 25 !important;
+    font-family: 'Cinzel', serif;
+}
+
+.data-icon {
+    color: #41A4F0;
+    padding: 1rem 0 1.5rem 0;
 }

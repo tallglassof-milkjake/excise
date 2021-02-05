@@ -9,6 +9,7 @@ import Hello from './components/Hello/Hello';
 import Dashboard from './pages/Dashboard';
 import Excise from './pages/Excise';
 import ViewPage from './pages/View';
+import Calendar from './pages/Calendar';
 
 import Loading from './components/Loading/Loading';
 
@@ -28,6 +29,7 @@ function App() {
                   <ProtectedRoute path='/excise' exact component={Excise} />
                   <ProtectedRoute path='/loading' exact component={Loading} />
                   <ProtectedRoute path='/dashboard/:id' exact component={ViewPage} />
+                  <ProtectedRoute path='/calendar' exact component={Calendar} />
                 </Switch>
             </div>
         </div>

@@ -1,12 +1,14 @@
 .calculator-head {
     margin-top: 1.5rem;
     margin-left: 2rem;
+    font-weight: normal;
 }
 
 .calc-card {
     margin-right: 2.5rem !important;
     border: 2px solid #41A4F0 !important;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .calc-btn {

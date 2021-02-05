@@ -3,6 +3,7 @@
     margin-top: 2rem;
     margin-left: 10%;
     margin-right: 10%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .dash-card {
@@ -10,4 +11,26 @@
   border: 2px solid #41A4F0 !important;
   margin-left: 2.5rem !important;
   margin-right: 2.5rem !important;
+}
+
+.pagination {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.headings {
+  font-weight: 400 !important;
+}
+
+.data-row {
+  font-weight: 200;
+}
+
+.data-link {
+  text-decoration: none !important;
+  color: #41A4F0;
+}
+
+.data-link:hover {
+  color: #F05D59;
 }

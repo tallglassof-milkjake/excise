@@ -10,13 +10,13 @@ const WelcomeData = ({ currentExcise }) => {
             {currentExcise.map(excise => {
                 return(
                 <tr key={excise._id}>
-                    <td data-th='Product'>
+                    <td data-th='Product' className='body'>
                         {excise.product}
                     </td>
-                    <td data-th='Volume'>
+                    <td data-th='Volume' className='body'>
                         {excise.volume} L
                     </td>
-                    <td data-th='Abv %'>
+                    <td data-th='Abv %' className='body'>
                         {excise.abv} %
                     </td>
                 </tr>

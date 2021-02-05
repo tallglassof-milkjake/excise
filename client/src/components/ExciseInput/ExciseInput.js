@@ -43,6 +43,13 @@ function ExciseForm() {
 
         dateRef.current.value = "";
         productRef.current.value = "";
+        descriptionRef.current.value = "";
+        vessel_idRef.current.value = "";
+        volumeRef.current.value = "";
+        abvRef.current.value = "";
+        lalsRef.current.value = "";
+        employeeRef.current.value = "";
+        notesRef.current.value = "";
     }
 
     return (
@@ -50,8 +57,8 @@ function ExciseForm() {
             <div className='excise-main container'>
                 <div className='row align-items-center'>
                     <div className='col-md-8'>
-                        <h1 className='display-1'>Add to Database</h1>
-
+                        <h1 className='display-4 excise-head'>Add to Database</h1>
+                        <i className="fas fa-database fa-4x data-icon"></i>
                         <p className='lead'>
                             Fill out finished product details here to save to database
                         </p>
@@ -59,7 +66,7 @@ function ExciseForm() {
                         <hr/>
                     </div>
                     <div className='col-md-4 text-center'>
-                        <i className="fas fa-database fa-5x" style={{color: '#41A4F0'}}></i>
+                        
                     </div>
                 </div>
                     <Form className='excise-form' onSubmit={handleSubmit}>
@@ -70,7 +77,8 @@ function ExciseForm() {
                                     <Form.Control type='date' ref={dateRef} className='date-input' />
                                 </Form.Group>
                             </div>
-                            
+                        </div>
+                        <div className='row'>
                             <div className='col-4'>
                                 <Form.Group>
                                     <Form.Label>Product:</Form.Label>
@@ -84,7 +92,8 @@ function ExciseForm() {
                                     <Form.Control type='text' ref={descriptionRef} placeholder='Description' className='description-input' />
                                 </Form.Group>
                             </div>
-
+                        </div>
+                        <div className='row'>
                             <div className='col-2'>
                                 <Form.Group>
                                     <Form.Label>Vessel Id:</Form.Label>
@@ -95,31 +104,25 @@ function ExciseForm() {
                             <div className='col-2'>
                                 <Form.Group>
                                     <Form.Label>Volume:</Form.Label>
-                                    <Form.Control type='number' ref={volumeRef} placeholder='Volume' className='volume-input' />
-                                </Form.Group>
-                            </div>
-
-                            <div className='col-2'>
-                                <Form.Group>
-                                    <Form.Label>Volume:</Form.Label>
-                                    <Form.Control type='number' ref={volumeRef} placeholder='Volume' className='volume-input' />
+                                    <Form.Control type='number' ref={volumeRef} placeholder='Volume' className='volume-input' step='.01' />
                                 </Form.Group>
                             </div>
 
                             <div className='col-2'>
                                 <Form.Group>
                                     <Form.Label>ABV:</Form.Label>
-                                    <Form.Control type='number' ref={abvRef} placeholder='ABV' className='abv-input' />
+                                    <Form.Control type='number' ref={abvRef} placeholder='ABV' className='abv-input' step='.01' />
                                 </Form.Group>
                             </div>
                             
                             <div className='col-2'>
                                 <Form.Group>
                                     <Form.Label>LALs:</Form.Label>
-                                    <Form.Control type='number' ref={lalsRef} placeholder='LALs' className='lals-input' />
+                                    <Form.Control type='number' ref={lalsRef} placeholder='LALs' className='lals-input' step='.01' />
                                 </Form.Group>
                             </div>
-                            
+                        </div>
+                        <div className='row'>
                             <div className='col-3'>
                                 <Form.Group>
                                     <Form.Label>Employee:</Form.Label>

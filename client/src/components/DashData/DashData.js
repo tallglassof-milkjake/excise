@@ -11,7 +11,7 @@ function DashData({ excise, currentExcise }) {
 
     console.log(path);
     console.log(id);
-
+    
     return (
         <>
         <tbody>
@@ -19,11 +19,14 @@ function DashData({ excise, currentExcise }) {
                 return(
                 <tr 
                     key={excise._id}
+                    className='data-row'
                 >
-                    <td data-th="Date">
+                    <td 
+                        data-th="Date"
+                    >
                         <Link 
                             to={`/dashboard/${excise._id}`}
-                            // onClick={handleClick}
+                            className='data-link'
                             id={excise._id}
                         >
                             {excise.date}

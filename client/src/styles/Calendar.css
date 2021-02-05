@@ -1,0 +1,38 @@
+.calendar-row {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5rem 0 0 5rem;
+}
+
+.calendar-col {
+    width: 100%;
+}
+
+.main-col {
+    width: 100%;
+}
+
+.react-calendar {
+    width: 1000px;
+    border: 2px solid #41A4F0 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.react-calendar__tile--active {
+    background-color: #41A4F0;
+    color: #F5F5F5;
+}
+
+.calendar-card {
+    border: 2px solid #41A4F0 !important;
+}
+
+.calendar-btn {
+    background-color: #F05D59 !important;
+    border: #F05D59 !important;
+    width: fit-content !important;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+}

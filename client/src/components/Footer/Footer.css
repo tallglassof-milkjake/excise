@@ -1,0 +1,26 @@
+.foot-row {
+    width: 100%;
+    margin: 0 !important;
+    bottom: 0;
+    height: 60px !important;
+    line-height: -10px !important;
+    position: absolute !important;
+}
+
+.foot-col {
+
+}
+
+.foot-list {
+    list-style: none;
+    margin: 0 !important;
+}
+
+.foot-list-item {
+    text-decoration: none !important;
+}
+
+.excise-icon {
+    padding-right: 1rem;
+    padding-left: 2.5rem;
+}
