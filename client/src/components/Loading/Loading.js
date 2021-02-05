@@ -3,6 +3,10 @@ import './Loading.css';
 
 const Loading = () => {
     return (
+        <>
+        <div className='col-2 side-bar-col'>
+                    <SideBar />
+            </div>
         <div className='container-fluid load-container'>
             <div className='row load-row align-items-center'>
                 <div className='col text-center'>
@@ -10,6 +14,7 @@ const Loading = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 };
 
