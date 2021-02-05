@@ -18,7 +18,7 @@
 ### Description
 
 An excise logging, tracking and calculating application.
-Deplyed Link: [](https://excise-able.herokuapp.com/)
+Deplyed Link: [https://excise-able.herokuapp.com/](https://excise-able.herokuapp.com/)
 
 
 ### Installation
