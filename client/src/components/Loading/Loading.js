@@ -1,5 +1,6 @@
 import React from 'react';
 import './Loading.css';
+import SideBar from '../SideBar/Nav';
 
 const Loading = () => {
     return (

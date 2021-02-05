@@ -19,4 +19,5 @@
     padding: 0 !important;
     height: 100%;
     overflow: auto;
+    background-repeat: no-repeat !important;
 }
