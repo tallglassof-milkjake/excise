@@ -14,6 +14,7 @@
 
 * **[Questions](#Questions)**
 
+![Main Dashboard](./assets/dash.png)
 
 ### Description
 
