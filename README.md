@@ -18,7 +18,8 @@
 
 ### Description
 
-An excise logging, tracking and calculating application.
+An excise logging, tracking and calculating application using the MERN stack.
+
 Deplyed Link: [https://excise-able.herokuapp.com/](https://excise-able.herokuapp.com/)
 
 
