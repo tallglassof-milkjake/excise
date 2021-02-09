@@ -39,7 +39,7 @@ class ViewData extends Component {
         console.log(this.state.data)
     return (
         <>
-        <div className='card'>
+        <div className='card d-flex'>
             <h1 className='card-title'>
                 Product: {this.state.data.product}
             </h1>
@@ -51,7 +51,7 @@ class ViewData extends Component {
             </p>
         </div>
 
-        <div className='card'>
+        <div className='card d-flex'>
             <h1 className='card-title'>
                 Excise Numbers
             </h1>
@@ -69,7 +69,7 @@ class ViewData extends Component {
             </p>
         </div>
 
-        <div className='card'>
+        <div className='card d-flex'>
             <h1 className='card-title'>
                 Other Information
             </h1>
