@@ -39,41 +39,41 @@ class ViewData extends Component {
     return (
         <>
         <div className='card'>
-            <h1>
+            <h1 className='card-title'>
                 Product: {this.state.data.product}
             </h1>
-            <p>
+            <p className='card-text'>
                 Date: {this.state.data.date}
             </p>
-            <p>
-                Description {this.state.data.description}
+            <p className='card-text'>
+                Description: <p className='text-light'>{this.state.data.description}</p>
             </p>
         </div>
         <div className='card'>
-            <h1>
+            <h1 className='card-title'>
                 Excise Numbers
             </h1>
-            <p>
+            <p className='card-text'>
                 Vessel: {this.state.data.vessel_id}
             </p>
-            <p>
-                Volume: {this.state.data.volume}
+            <p className='card-text'>
+                Volume: {this.state.data.volume}L
             </p>
-            <p>
-                Abv: {this.state.data.abv}
+            <p className='card-text'>
+                Abv: {this.state.data.abv}%
             </p>
-            <p>
+            <p className='card-text'>
                 LaLs: {this.state.data.lals}
             </p>
         </div>
         <div className='card'>
-            <h1>
+            <h1 className='card-title'>
                 Other Information
             </h1>
-            <p>
+            <p className='card-text'>
                 {this.state.data.employee}
             </p>
-            <p>
+            <p className='card-text'>
                 {this.state.data.notes}
             </p>
         </div>
