@@ -6,7 +6,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
   const redirect = process.env.REACT_APP_AFTER_LOGIN;
-  // const deployedRedirect = process.env.REACT_APP_DEPLOYED_REDIRECT;
+  const deployedRedirect = process.env.REACT_APP_DEPLOYED_REDIRECT;
 
   const history = useHistory();
 

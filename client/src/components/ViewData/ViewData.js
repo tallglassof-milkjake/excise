@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { useParams } from 'react-router-dom';
 import API from '../../utils/API';
+import './ViewData.css';
 
 class ViewData extends Component {
 
@@ -67,7 +68,7 @@ class ViewData extends Component {
                 LaLs: {this.state.data.lals}
             </p>
         </div>
-        
+
         <div className='card'>
             <h1 className='card-title'>
                 Other Information
