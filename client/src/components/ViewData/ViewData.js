@@ -38,48 +38,50 @@ class ViewData extends Component {
     render() {
         console.log(this.state.data)
     return (
-        <div className='d-flex'>
-        <div className='card'>
-            <h1 className='card-title'>
-                Product: {this.state.data.product}
-            </h1>
-            <p className='card-text'>
-                Date: {this.state.data.date}
-            </p>
-            <p className='card-text'>
-                Description: {this.state.data.description}
-            </p>
-        </div>
+        <div className='row'>
+            <div className='col d-flex align-items-stretch'>
+                <div className='card'>
+                    <h1 className='card-title'>
+                        Product: {this.state.data.product}
+                    </h1>
+                    <p className='card-text'>
+                        Date: {this.state.data.date}
+                    </p>
+                    <p className='card-text'>
+                        Description: {this.state.data.description}
+                    </p>
+                </div>
 
-        <div className='card'>
-            <h1 className='card-title'>
-                Excise Numbers
-            </h1>
-            <p className='card-text'>
-                Vessel: {this.state.data.vessel_id}
-            </p>
-            <p className='card-text'>
-                Volume: {this.state.data.volume}L
-            </p>
-            <p className='card-text'>
-                Abv: {this.state.data.abv}%
-            </p>
-            <p className='card-text'>
-                LaLs: {this.state.data.lals}
-            </p>
-        </div>
+                <div className='card'>
+                    <h1 className='card-title'>
+                        Excise Numbers
+                    </h1>
+                    <p className='card-text'>
+                        Vessel: {this.state.data.vessel_id}
+                    </p>
+                    <p className='card-text'>
+                        Volume: {this.state.data.volume}L
+                    </p>
+                    <p className='card-text'>
+                        Abv: {this.state.data.abv}%
+                    </p>
+                    <p className='card-text'>
+                        LaLs: {this.state.data.lals}
+                    </p>
+                </div>
 
-        <div className='card'>
-            <h1 className='card-title'>
-                Other Information
-            </h1>
-            <p className='card-text'>
-                Employee: {this.state.data.employee}
-            </p>
-            <p className='card-text'>
-                Notes: {this.state.data.notes}
-            </p>
-        </div>
+                <div className='card'>
+                    <h1 className='card-title'>
+                        Other Information
+                    </h1>
+                    <p className='card-text'>
+                        Employee: {this.state.data.employee}
+                    </p>
+                    <p className='card-text'>
+                        Notes: {this.state.data.notes}
+                    </p>
+                </div>
+            </div>
         </div>
     )
     }
