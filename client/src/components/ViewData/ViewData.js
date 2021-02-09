@@ -46,9 +46,10 @@ class ViewData extends Component {
                 Date: {this.state.data.date}
             </p>
             <p className='card-text'>
-                Description: <p className='text-light'>{this.state.data.description}</p>
+                Description: {this.state.data.description}
             </p>
         </div>
+
         <div className='card'>
             <h1 className='card-title'>
                 Excise Numbers
@@ -66,15 +67,16 @@ class ViewData extends Component {
                 LaLs: {this.state.data.lals}
             </p>
         </div>
+        
         <div className='card'>
             <h1 className='card-title'>
                 Other Information
             </h1>
             <p className='card-text'>
-                {this.state.data.employee}
+                Employee: {this.state.data.employee}
             </p>
             <p className='card-text'>
-                {this.state.data.notes}
+                Notes: {this.state.data.notes}
             </p>
         </div>
         </>
