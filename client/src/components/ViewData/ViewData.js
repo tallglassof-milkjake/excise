@@ -38,8 +38,8 @@ class ViewData extends Component {
     render() {
         console.log(this.state.data)
     return (
-        <>
-        <div className='card d-flex'>
+        <div className='d-flex'>
+        <div className='card'>
             <h1 className='card-title'>
                 Product: {this.state.data.product}
             </h1>
@@ -51,7 +51,7 @@ class ViewData extends Component {
             </p>
         </div>
 
-        <div className='card d-flex'>
+        <div className='card'>
             <h1 className='card-title'>
                 Excise Numbers
             </h1>
@@ -69,7 +69,7 @@ class ViewData extends Component {
             </p>
         </div>
 
-        <div className='card d-flex'>
+        <div className='card'>
             <h1 className='card-title'>
                 Other Information
             </h1>
@@ -80,7 +80,7 @@ class ViewData extends Component {
                 Notes: {this.state.data.notes}
             </p>
         </div>
-        </>
+        </div>
     )
     }
 }
