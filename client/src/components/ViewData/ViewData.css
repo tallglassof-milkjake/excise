@@ -1,6 +1,6 @@
 .card {
     padding: 0.9375rem;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 2rem;
 }
 
 .view-data-card {
@@ -8,6 +8,7 @@
     max-height: fit-content;
     width: max-content;
     min-width: 400px;
+    border: 2px solid #41A4F0 !important;
 }
 
 .display-4 {
