@@ -8,11 +8,19 @@
     width: max-content;
 }
 
-.display-d {
+.display-4 {
     margin-left: 0 !important;
 }
 
 h1, p {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 1.5rem;
+}
+
+.card-heading {
+    padding-bottom: 1rem;
+}
+
+.card.text {
+    padding-bottom: .5rem;
 }

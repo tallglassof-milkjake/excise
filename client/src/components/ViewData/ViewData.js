@@ -63,19 +63,19 @@ class ViewData extends Component {
             <div className='col align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-heading'>
-                        Excise Numbers
+                        <strong>Excise Numbers</strong>
                     </h1>
                     <p className='card-text'>
-                        Vessel: {this.state.data.vessel_id}
+                        <strong>Vessel:</strong> {this.state.data.vessel_id}
                     </p>
                     <p className='card-text'>
-                        Volume: {this.state.data.volume}L
+                        <strong>Volume:</strong> {this.state.data.volume}L
                     </p>
                     <p className='card-text'>
-                        Abv: {this.state.data.abv}%
+                        <strong>Abv:</strong> {this.state.data.abv}%
                     </p>
                     <p className='card-text'>
-                        LaLs: {this.state.data.lals}
+                        <strong>LaLs:</strong> {this.state.data.lals}
                     </p>
                 </div>
             </div>
@@ -84,13 +84,13 @@ class ViewData extends Component {
             <div className='col align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-heading'>
-                        Other Information
+                        <strong>Other Information</strong>
                     </h1>
                     <p className='card-text'>
-                        Employee: {this.state.data.employee}
+                        <strong>Employee:</strong> {this.state.data.employee}
                     </p>
                     <p className='card-text'>
-                        Notes: {this.state.data.notes}
+                        <strong>Notes:</strong> {this.state.data.notes}
                     </p>
                 </div>
             </div>
