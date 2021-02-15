@@ -5,6 +5,7 @@ table {
 .current-products {
     margin-left: 2.5rem !important;
     margin-right: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
     border: 2px solid #41A4F0 !important;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
