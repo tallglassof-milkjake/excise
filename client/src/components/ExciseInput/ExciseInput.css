@@ -35,8 +35,12 @@ hr {
 }
 
 .form-control {
-    font-weight: 25 !important;
-    font-family: 'Cinzel', serif;
+    font-weight: 200 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 2rem;
 }
 
 .data-icon {
