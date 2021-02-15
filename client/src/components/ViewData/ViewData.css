@@ -4,6 +4,6 @@
 }
 
 .view-data-card {
-    height: 450px;
+    height: max-content;
     width: 450px;
 }
