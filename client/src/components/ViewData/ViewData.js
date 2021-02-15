@@ -48,13 +48,13 @@ class ViewData extends Component {
             <div className='col align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-heading'>
-                        Product: {this.state.data.product}
+                        <strong>Product:</strong> {this.state.data.product}
                     </h1>
                     <p className='card-text'>
-                        Date: {this.state.data.date}
+                        <strong>Date:</strong> {this.state.data.date}
                     </p>
                     <p className='card-text'>
-                        Description: {this.state.data.description}
+                        <strong>Description:</strong> {this.state.data.description}
                     </p>
                 </div>
             </div>
