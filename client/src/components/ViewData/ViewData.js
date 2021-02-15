@@ -51,7 +51,8 @@ class ViewData extends Component {
                         Description: {this.state.data.description}
                     </p>
                 </div>
-
+            </div>
+            <div className='col d-flex align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Excise Numbers
@@ -69,7 +70,8 @@ class ViewData extends Component {
                         LaLs: {this.state.data.lals}
                     </p>
                 </div>
-
+            </div>
+            <div className='col d-flex align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Other Information
