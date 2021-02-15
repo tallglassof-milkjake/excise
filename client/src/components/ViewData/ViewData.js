@@ -40,9 +40,14 @@ class ViewData extends Component {
     return (
         <>
         <div className='row w-100'>
+            <div className='col'>
+                <h1 className='display-4'>Data View</h1>
+            </div>
+        </div>
+        <div className='row w-100'>
             <div className='col align-items-stretch'>
                 <div className='card view-data-card'>
-                    <h1 className='card-title'>
+                    <h1 className='card-heading'>
                         Product: {this.state.data.product}
                     </h1>
                     <p className='card-text'>
@@ -57,7 +62,7 @@ class ViewData extends Component {
         <div className='row w-100'>
             <div className='col align-items-stretch'>
                 <div className='card view-data-card'>
-                    <h1 className='card-title'>
+                    <h1 className='card-heading'>
                         Excise Numbers
                     </h1>
                     <p className='card-text'>
@@ -78,7 +83,7 @@ class ViewData extends Component {
         <div className='row w-100'>
             <div className='col align-items-stretch'>
                 <div className='card view-data-card'>
-                    <h1 className='card-title'>
+                    <h1 className='card-heading'>
                         Other Information
                     </h1>
                     <p className='card-text'>
