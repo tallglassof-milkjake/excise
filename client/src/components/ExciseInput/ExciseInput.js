@@ -76,6 +76,7 @@ function ExciseForm() {
                                     <Form.Label>Date:</Form.Label>
                                     <Form.Control type='date' ref={dateRef} className='date-input' />
                                 </Form.Group>
+                                <hr />
                             </div>
                         </div>
                         <div className='row'>
@@ -120,6 +121,7 @@ function ExciseForm() {
                                     <Form.Label>LALs:</Form.Label>
                                     <Form.Control type='number' ref={lalsRef} placeholder='LALs' className='lals-input' step='.01' />
                                 </Form.Group>
+                                <hr />
                             </div>
                         </div>
                         <div className='row'>

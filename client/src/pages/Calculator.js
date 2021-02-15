@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../components/SideBar/Nav';
+import SideBar from '../components/SideBar/Nav';
 
 const Calculator = () => {
     return (
