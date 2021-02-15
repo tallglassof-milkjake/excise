@@ -40,7 +40,7 @@ class ViewData extends Component {
     return (
         <div className='row'>
             <div className='col d-flex align-items-stretch'>
-                <div className='card'>
+                <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Product: {this.state.data.product}
                     </h1>
@@ -52,7 +52,7 @@ class ViewData extends Component {
                     </p>
                 </div>
 
-                <div className='card'>
+                <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Excise Numbers
                     </h1>
@@ -70,7 +70,7 @@ class ViewData extends Component {
                     </p>
                 </div>
 
-                <div className='card'>
+                <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Other Information
                     </h1>

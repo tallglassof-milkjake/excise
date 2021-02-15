@@ -2,3 +2,8 @@
     padding: 0.9375rem;
     margin: 2rem;
 }
+
+.view-data-card {
+    height: 800px;
+    width: 450px;
+}
