@@ -1,21 +1,28 @@
 .card {
     padding: 0.9375rem;
-    /* margin: 2rem; */
+    margin: 1rem;
 }
 
 .view-data-card {
     min-height: 200px;
     max-height: fit-content;
     width: max-content;
+    min-width: 400px;
 }
 
 .display-4 {
     padding-left: 0 !important;
+    margin-left: 2rem !important;
 }
 
-h1, p {
+p {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 1.5rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2rem;
 }
 
 .card-heading {
