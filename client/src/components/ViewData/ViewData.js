@@ -39,7 +39,7 @@ class ViewData extends Component {
         console.log(this.state.data)
     return (
         <div className='row'>
-            <div className='col d-flex align-items-stretch'>
+            <div className='col w-100 align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Product: {this.state.data.product}
@@ -52,7 +52,7 @@ class ViewData extends Component {
                     </p>
                 </div>
             </div>
-            <div className='col d-flex align-items-stretch'>
+            <div className='col w-100 align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Excise Numbers
@@ -71,7 +71,7 @@ class ViewData extends Component {
                     </p>
                 </div>
             </div>
-            <div className='col d-flex align-items-stretch'>
+            <div className='col w-100 align-items-stretch'>
                 <div className='card view-data-card'>
                     <h1 className='card-title'>
                         Other Information
