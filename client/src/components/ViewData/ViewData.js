@@ -38,7 +38,7 @@ class ViewData extends Component {
     render() {
         console.log(this.state.data)
     return (
-        <>
+        <div className='background'>
         <div className='row w-100'>
             <div className='col'>
                 <h1 className='display-4'>Data View</h1>
@@ -95,7 +95,7 @@ class ViewData extends Component {
                 </div>
             </div>
         </div>
-        </>
+        </div>
     )
     }
 }
