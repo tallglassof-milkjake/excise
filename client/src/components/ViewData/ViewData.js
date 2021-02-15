@@ -66,7 +66,7 @@ class ViewData extends Component {
                         <strong>Excise Numbers</strong>
                     </h1>
                     <p className='card-text'>
-                        <strong>Vessel:</strong> {this.state.data.vessel_id}
+                        <strong>Vessel:</strong> {this.state.data.vessel_Id}
                     </p>
                     <p className='card-text'>
                         <strong>Volume:</strong> {this.state.data.volume}L
